@@ -1,0 +1,28 @@
+arr 	[100]
+1-10 全部
+顺序、倒序
+
+obj{
+num:1
+question:
+answer:
+}
+功能与样式整理
+
+取出arrNew: getNewArr(arr,num,flag) true 向前，向后
+乱序：下一页
+顺序：第一个 1.下一页
+  num!=1 上一页 下一页
+	最后一个 num==arr.length-1 上一页
+
+buildContent 循环arrNew 生成
+	
+
+配置，是否写入本地存储
+展示不同的清单
+
+
+添加与编辑 均为当前的库
+
+
+创建新库  libName libContent
