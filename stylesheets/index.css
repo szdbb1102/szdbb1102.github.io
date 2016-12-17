@@ -84,6 +84,10 @@ body{
   top: 14px;
   left: 23px;
 }
+.item-avatar img{
+  width: 100%;
+  height: 100%;
+}
 .item-title{
   width: 50px;
   height: 14px;
@@ -105,6 +109,10 @@ body{
   text-decoration: none;
   background-color: #E5E5E5;
 }
+.item-add{
+    top: 58px;
+    right: 126px;
+}
 .item-cont{
   width: 100%;
   height: 66px;
@@ -121,7 +129,26 @@ body{
   position: relative;
   top: -6px;
 }
-
+.rightBar{
+  float: left;
+  width: 330px;
+  height: 500px;
+  background: #fff;
+  border-bottom: 1px solid #E2E2E2;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 5px #d3d6da;
+}
+.ri-title{
+  background: #ECECEC;
+  padding: 10px;
+  font-size: 12px;
+  color: #474846;
+  text-align: center;
+}
+.Copyright{
+  text-align: center;
+  color: #999;
+}
 
 
 
