@@ -194,3 +194,18 @@ body{
 }
 
 
+/*清单样式开始*/
+.listWrap{
+  overflow: hidden;
+}
+.listWrap li{
+  float: left;
+  padding: 2px 5px;
+  font-size: 14px;
+  line-height: 14px;
+  border: 1px solid #bfbfbf;
+  cursor: pointer;
+  margin: 10px;
+}
+/*清单样式结束*/
+
