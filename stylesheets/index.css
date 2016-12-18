@@ -152,6 +152,45 @@ body{
   text-align: center;
   color: #999;
 }
-
+.tip{
+  position: fixed;
+  top: 120px;
+  left: 200px;
+  width: 500px;
+  height: 250px;
+  background:#fff;
+  border: 1px solid #666;
+}
+.tip>p{
+  padding-left: 20px;
+  vertical-align: middle;
+}
+.tip textarea{
+  border: none;
+  border-bottom: 1px solid #999;
+  width: 70%;
+  height: 20px;
+  font-size: 14px;
+  line-height: 14px;
+}
+.tip-btn-wrap{
+  width: 140px;
+  margin: 0 auto;
+}
+.btn-true,.btn-close{
+  float: left;
+  text-align: center;
+  width: 50px;
+  height: 20px;
+  border-radius: 4px;
+  font-size: 16px;
+  line-height: 20px;
+  border: 1px solid #bfbfbf; 
+  cursor: pointer;
+}
+.btn-true{
+  background:#fff;
+  margin-right: 12px; 
+}
 
 
