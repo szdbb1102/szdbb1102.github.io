@@ -49,37 +49,75 @@ var xxindex = {
 		$('.listAddFrame .btn').click(function(event) {
 			if ($(".listAddFrame input").val()!="") {
 				$("#listName").text($(".listAddFrame input").val());
-				xxindex.someLibFunction.addNewlib($(".listAddFrame input").val(),"");
+				xxindex.someLibFunction.addNewlib($(".listAddFrame input").val(),[]);
 			}
 		});
 		$(".setting .sort").click(function (argument) {
-			var arrNow  = xxindex.params.lib[$("#listName").text()];	
+			var arrNow  = xxindex.params.lib[$("#listName").text()].slice(0);	
 			var data = xxindex.someLibFunction.dataSort($(this).attr("sort"),arrNow);
 			xxindex.someLibFunction.buildContent(data);
 		});
+		$("#addTip .btn-true").click(function (argument) {
+			var flag = $(this).attr('edit');
+			var quesStr = $("#addTip textarea").eq(0).val();
+			var answStr = $("#addTip textarea").eq(1).val();
+ 			if (flag=="true"&&quesStr!=""&&answStr!="") {
+ 				var obj ={
+					"ques":quesStr,
+					"answ":answStr,
+					"index":$(this).attr('nowIndex'),
+					"ifGet":false
+				}
+				xxindex.params.lib[$("#listName").text()][$(this).attr('nowIndex')]=obj;
+				$(this).attr('edit',"false");
+			}else if(flag=="false"&&quesStr!=""&&answStr!=""){
+				
+				var obj ={
+					"ques":quesStr,
+					"answ":answStr,
+					"index":xxindex.params.lib[$("#listName").text()].length,
+					"ifGet":false
+				}
+				xxindex.params.lib[$("#listName").text()].push(obj); 
 
+			}
+			var dataNow = xxindex.params.lib[$("#listName").text()];
+			xxindex.someLibFunction.buildContent(dataNow);
+			xxindex.someDomOptions.showLibCont(dataNow);
+			xxindex.someDomOptions.closeAddTip($("#addTip"));
+
+
+		});
 			
 	},
 	// 事件绑定
 	"someLibFunction":{
 		buildContent:function (data) {//生成内容
 			var html = "";
-			for (var i = 0; i < data.length; i++) {
-				var obj = data[i];
-				html +='<div class="item" index="'+obj.index+'"ques="true">\
-				            <div class="item-avatar">\
-				              <img src="images/319.png"></div>\
-				            <div class="item-title">问题</div>\
-				            <div class="item-btn">点击编辑</div>\
-				            <div class="item-cont item-ques">问题：'+obj.ques+'</div>\
-				            <div class="item-cont item-answ none">答案：'+obj.answ+'</div>\
-			            </div>';
+			if (data.length>0) {
+				for (var i = 0; i < data.length; i++) {
+					var obj = data[i];
+					html +='<div class="item" index="'+obj.index+'"ques="true">\
+					            <div class="item-avatar">\
+					              <img src="images/319.png"></div>\
+					            <div class="item-title">问题</div>\
+					            <div class="item-btn edit-btn">点击编辑</div>\
+					            <div class="item-cont item-ques">问题：'+obj.ques+'</div>\
+					            <div class="item-cont item-answ none">答案：'+obj.answ+'</div>\
+				            </div>';
+				}
 			}
+			
 			$(".body .item").not(".addItmBtnWrap").remove();
 			$(".addItmBtnWrap").before(html);
 			$(".body .cont>.item").click(function(event) {
 				xxindex.someDomOptions.switchQA($(this));
 			});
+			$(".item-btn.edit-btn").unbind().click(function(event) {
+			var indexToUse  =$(this).parent(".item").attr("index");
+			$("#addTip .btn-true").attr("nowIndex",indexToUse).attr("edit","true");
+			xxindex.someDomOptions.showAddTip($("#addTip"));
+		});
 		},
 		dataSort:function (flag,data) {//1顺序，2倒序，3乱序
 			var arr=[];
