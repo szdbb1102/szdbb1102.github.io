@@ -16,7 +16,8 @@ var xxindex = {
 				}
 			]
 		},
-		"ifLocal":true
+		"ifLocal":true,
+		"morenLib":"moren"
 	},
 	init:function () {
 		// this.settings(true,5);
@@ -122,6 +123,7 @@ var xxindex = {
 			var indexToUse  =$(this).parent(".item").attr("index");
 			$("#addTip .btn-true").attr("nowIndex",indexToUse).attr("edit","true");
 			xxindex.someDomOptions.showAddTip($("#addTip"));
+			__.setLocalStore("moren",$("#listName").text());
 		});
 		},
 		dataSort:function (flag,data) {//1顺序，2倒序，3乱序
@@ -155,6 +157,13 @@ var xxindex = {
 			xxindex.params.lib[libName][index] = data;
 			xxindex.someLibFunction.buildContent(data);
 			xxindex.someDomOptions.showLibCont(data);
+		},
+		saveDataOnStore:function (data,libName) {
+			__.setLocalStore(libName,data);
+		},
+		readDataOnLocal:function (libName) {
+			var data  = __.redLocalStore(libName);
+			return data;
 		}
 
 	},
@@ -212,5 +221,8 @@ $(function (argument) {
 
 		}
 	];
-	xxindex.someLibFunction.buildContent(data);
+	var morenLibName  = __.redLocalStore("moren")?__.redLocalStore("moren"):"moren";
+	var curData =  xxindex.someLibFunction.readDataOnLocal(xxindex.params.morenLibName);
+	curData = (curData!="")?curData:xxindex.params.lib.moren;
+	xxindex.someLibFunction.buildContent(curData);
 })
