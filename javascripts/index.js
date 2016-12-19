@@ -88,6 +88,11 @@ var xxindex = {
 
 
 		});
+		$(".nav>ul>li").click(function (argument) {
+			var str = "."+ $(this).attr("id");
+			$(".rightBar>div").not(".ri-title").addClass("none");
+			$(str).removeClass("none");
+		});
 			
 	},
 	// 事件绑定
