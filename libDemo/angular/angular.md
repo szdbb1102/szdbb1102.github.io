@@ -27,3 +27,21 @@ angular自定义指令中的作用域
     .controller('DirectiveController', ['$scope', function($scope){
         $scope.name="mike";
     }]);
+邮箱验证
+    <form ng-app="" name="myForm">
+        Email:
+        <input type="email" name="myAddress" ng-model="text">
+        <span ng-show="myForm.myAddress.$error.email">不是一个合法的邮箱地址</span>
+    </form>
+邮箱验证的状态
+    <form ng-app="" name="myForm" ng-init="myText = 'test@runoob.com'">
+
+    Email:
+    <input type="email" name="myAddress" ng-model="myText" required>
+    <p>编辑邮箱地址，查看状态的改变。</p>
+    <h1>状态</h1>
+    <p>Valid: {{myForm.myAddress.$valid}} (如果输入的值是合法的则为 true)。</p>
+    <p>Dirty: {{myForm.myAddress.$dirty}} (如果值改变则为 true)。</p>
+    <p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
+
+    </form>

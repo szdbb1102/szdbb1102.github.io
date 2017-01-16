@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4d423bc-8a5c-47c0-908b-4258e9e1288a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libDemo/angular/angular.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/libDemo/angular/angular.md" afterPath="$PROJECT_DIR$/libDemo/angular/angular.md" />
     </list>
     <ignored path="szdbb1102.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,8 +51,8 @@
       <file leaf-file-name="angular.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/libDemo/angular/angular.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="672">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            <state relative-caret-position="388">
+              <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -290,12 +289,12 @@
       <workItem from="1483421937788" duration="149000" />
       <workItem from="1483422246388" duration="3635000" />
       <workItem from="1484287136949" duration="687000" />
-      <workItem from="1484545659645" duration="959000" />
+      <workItem from="1484545659645" duration="1758000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8176000" />
+    <option name="totallyTimeSpent" value="8975000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -710,8 +709,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/libDemo/angular/angular.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="672">
-          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        <state relative-caret-position="388">
+          <caret line="46" column="11" selection-start-line="46" selection-start-column="11" selection-end-line="46" selection-end-column="11" />
           <folding />
         </state>
       </provider>
