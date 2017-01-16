@@ -22,13 +22,13 @@ var xxindex = {
 	init:function () {
 		// this.settings(true,5);
 		this.dataOptions();
-		this.rightOptions();	
+		this.rightOptions();
 		this.eventBind();
 		this.someDomOptions.showList();
 	},
 	// 初始化
 	rightOptions:function () {
-		
+
 	},
 	// 右侧与顶部菜单栏相应操作
 	settings:function (ifLocal,initNum) {
@@ -37,29 +37,29 @@ var xxindex = {
 	},
 	//配置操作
 	dataOptions: function () {
-		
-	},	
+
+	},
 	// 数据相关操作
 	eventBind:function (argument) {
-		$("#addItmBtn").click(function () {
+		$("#addItmBtn").click(function () {//添加集合
 			xxindex.someDomOptions.showAddTip($("#addTip"))
 		});
-		$("#addTip .btn-close").click(function () {
+		$("#addTip .btn-close").click(function () {//关闭编辑集合弹窗
 			xxindex.someDomOptions.closeAddTip($("#addTip"))
 		});
-		$('.listAddFrame .btn').click(function(event) {
+		$('.listAddFrame .btn').click(function(event) {//右侧添加集合
 			if ($(".listAddFrame input").val()!="") {
 				$("#listName").text($(".listAddFrame input").val());
 				xxindex.someLibFunction.addNewlib($(".listAddFrame input").val(),[]);
 				__.setLocalStore($(".listAddFrame input").val(),[]);
 			}
 		});
-		$(".setting .sort").click(function (argument) {
-			var arrNow  = xxindex.params.lib[$("#listName").text()].slice(0);	
+		$(".setting .sort").click(function (argument) {//排序
+			var arrNow  = xxindex.params.lib[$("#listName").text()].slice(0);
 			var data = xxindex.someLibFunction.dataSort($(this).attr("sort"),arrNow);
 			xxindex.someLibFunction.buildContent(data);
 		});
-		$("#addTip .btn-true").click(function (argument) {
+		$("#addTip .btn-true").click(function (argument) {//编辑item确定按钮
 			var flag = $(this).attr('edit');
 			var quesStr = $("#addTip textarea").eq(0).val();
 			var answStr = $("#addTip textarea").eq(1).val();
@@ -73,14 +73,14 @@ var xxindex = {
 				xxindex.params.lib[$("#listName").text()][$(this).attr('nowIndex')]=obj;
 				$(this).attr('edit',"false");
 			}else if(flag=="false"&&quesStr!=""&&answStr!=""){
-				
+
 				var obj ={
 					"ques":quesStr,
 					"answ":answStr,
 					"index":xxindex.params.lib[$("#listName").text()].length,
 					"ifGet":false
 				}
-				xxindex.params.lib[$("#listName").text()].push(obj); 
+				xxindex.params.lib[$("#listName").text()].push(obj);
 
 			}
 			var dataNow = xxindex.params.lib[$("#listName").text()];
@@ -90,12 +90,12 @@ var xxindex = {
 
 
 		});
-		$(".nav>ul>li").click(function (argument) {
+		$(".nav>ul>li").click(function (argument) {//tab切换样式
 			var str = "."+ $(this).attr("id");
 			$(".rightBar>div").not(".ri-title").addClass("none");
 			$(str).removeClass("none");
 		});
-			
+
 	},
 	// 事件绑定
 	"someLibFunction":{
@@ -114,7 +114,7 @@ var xxindex = {
 				            </div>';
 				}
 			}
-			
+
 			$(".body .item").not(".addItmBtnWrap").remove();
 			$(".addItmBtnWrap").before(html);
 			$(".body .cont>.item").click(function(event) {
@@ -134,14 +134,14 @@ var xxindex = {
 			}else if(flag==2){
 				arr  = data.reverse();
 			}else if(flag==3){
-				arr = data.sort(function(){return Math.random()>0.5?-1:1;}); 
+				arr = data.sort(function(){return Math.random()>0.5?-1:1;});
 			}
 			return arr;
 		},
 		setIfLocal:function (flag) {// 是否本地存储
-			
+
 		},
-		addNewlib:function (name,data) {//添加新库	
+		addNewlib:function (name,data) {//添加新库
 			xxindex.params.list.push(name);
 			xxindex.params.lib[name] = data;
 			xxindex.someDomOptions.showList();
