@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b4d423bc-8a5c-47c0-908b-4258e9e1288a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/javascripts/test.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libDemo/angular/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/javascripts/index.js" afterPath="$PROJECT_DIR$/javascripts/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/todo/todo.txt" afterPath="$PROJECT_DIR$/todo/todo.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/libDemo/angular/angular.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="szdbb1102.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,11 +39,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/libDemo/angular/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="197">
               <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="angular.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/libDemo/angular/angular.md">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="672">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -120,6 +126,7 @@
         <option value="$PROJECT_DIR$/javascripts/test.js" />
         <option value="$PROJECT_DIR$/javascripts/index.js" />
         <option value="$PROJECT_DIR$/libDemo/angular/index.html" />
+        <option value="$PROJECT_DIR$/libDemo/angular/angular.md" />
       </list>
     </option>
   </component>
@@ -283,12 +290,12 @@
       <workItem from="1483421937788" duration="149000" />
       <workItem from="1483422246388" duration="3635000" />
       <workItem from="1484287136949" duration="687000" />
-      <workItem from="1484545659645" duration="191000" />
+      <workItem from="1484545659645" duration="959000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7408000" />
+    <option name="totallyTimeSpent" value="8176000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -697,6 +704,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="197">
           <caret line="20" column="8" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/libDemo/angular/angular.md">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
           <folding />
         </state>
       </provider>
