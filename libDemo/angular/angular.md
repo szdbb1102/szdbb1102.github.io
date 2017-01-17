@@ -45,3 +45,25 @@ angular自定义指令中的作用域
     <p>Touched: {{myForm.myAddress.$touched}} (如果通过触屏点击则为 true)。</p>
 
     </form>
+不同状态下的类名
+    <style>
+    input.ng-invalid {
+        background-color: lightblue;
+    }
+    </style>
+    <body>
+
+    <form ng-app="" name="myForm">
+        输入你的名字:
+        <input name="myAddress" ng-model="text" required>
+    </form>
+ng-model 指令根据表单域的状态添加/移除以下类：
+    ng-empty
+    ng-not-empty
+    ng-touched
+    ng-untouched
+    ng-valid
+    ng-invalid
+    ng-dirty
+    ng-pending
+    ng-pristine
