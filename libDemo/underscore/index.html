@@ -12,9 +12,19 @@
 <body>
 <div class="hehe"  hehe="xx"></div>
 <script>
-    $(function () {
-        console.log($("[hehe='xx']"));
+    var a =[1,2,3,4,5,6,7];
+    var b = [1,8,8,9,2];
+    _.each(b, function (num) {
+        var flg = _.every(a, function (num2) {
+            return num2!=num;
+        });
+        if(flg){
+            console.log("num",num);
+            a.push(num)
+        }
     });
+    console.log("a",a);
+    console.log("b",b);
 
 </script>
 
