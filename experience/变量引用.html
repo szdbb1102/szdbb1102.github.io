@@ -10,23 +10,24 @@
     <script src="../javascripts/jquery.js"></script>
 </head>
 <body>
-<div class="wrap">
-    <button>倒序</button>
-    <h2 index="2">第二个</h2>
-</div>
+    <div class="wrap">
+        <h2>未改变</h2>
+    </div>
 
-<div class="foot">
+    <div class="foot">
 
-</div>
-<script>
-    $(function () {
-        var a = $('.wrap');
-        console.log(a[0]);
-        $('.wrap').html('<h2>改变</h2>');
-        $('.foot').html(a[0]);
-    });
+    </div>
+    <script>
+        $(function () {
+            var a = $('.wrap');
+            //console.log(a[0]);
+            //$('.wrap').html('<h2>改变</h2>');
 
-</script>
+            $('.foot').html(a.prop("outerHTML"));
+            $('.foot .wrap h2').html('改变');
+        });
+
+    </script>
 
 </body>
 </html>
