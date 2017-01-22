@@ -13,3 +13,17 @@ _.each(b, function (num) {
         a.push(num)
     }
 });
+
+function ajax(length,index) {
+    length++;
+    console.log('length',length);
+    console.log('index',index);
+    a(length,index);
+}
+function a(length,index) { //a recursive function
+    if(length==index){
+        return
+    }
+    setTimeout(ajax(length,index),1000);
+}
+a(1,10);
