@@ -1,6 +1,13 @@
 {
   "pages": [
-    "page/component/index",
+    "page/component/index2",
+    "page/person/historyOrder/historyOrder",
+    "page/person/my/my",
+    "page/person/youhui/youhui",
+    "page/component/index2",
+    "page/component/index2",
+    "page/component/index2",
+    "page/component/index2",
     "page/component/component-pages/action-sheet/action-sheet",
     "page/component/component-pages/audio/audio",
     "page/component/component-pages/button/button",
@@ -68,7 +75,7 @@
   ],
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "同乐居",
+    "navigationBarTitleText": "饭小弟",
     "navigationBarBackgroundColor": "#fbf9fe",
     "backgroundColor": "#fbf9fe"
   },

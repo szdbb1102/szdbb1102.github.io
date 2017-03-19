@@ -1,0 +1,26 @@
+export default [
+    {
+        id:1,
+        price:89,
+        name:'石锅鱼',
+        sales:12,
+        pic:'dish-9.jpg',
+        count:0
+    },
+    {
+        id:3,
+        price:10,
+        name:'石锅牛蛙',
+        sales:18,
+        pic:'dish-10.jpg',
+        count:0
+    },
+    {
+        id:4,
+        price:10,
+        name:'石锅牛蛙',
+        sales:18,
+        pic:'dish-10.jpg',
+        count:0
+    }
+]
