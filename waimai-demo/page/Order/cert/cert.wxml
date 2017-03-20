@@ -1,14 +1,18 @@
-<view class="index">
-    <view class="order-address">
-        地址
-    </view>    
-    
-    <view class="order-info">
+<view class="order-wrap">
+    <view class="order-block">
+        <navigator url="../../person/adress/adress" class="order-item">选择送货地址</navigator>
+        <navigator url="" class="order-item">配送方式</navigator>
+        <navigator url="" class="order-item">配送时间</navigator>
     </view>
-
-    <view class="order-list">
-    
+    <view class="order-block">
+        <navigator url="" class="order-item">饭小弟</navigator>
+        <navigator url="" class="order-item">菜品名称</navigator>
+        <navigator url="" class="order-item">在线立减</navigator>
+        <navigator url="" class="order-item">优惠券</navigator>
+        <navigator url="" class="order-item">订单24¥ 优惠4¥ 实付20¥</navigator>
+        
     </view>
+    
 
     <view class="order-cert-wrp">
         <view class="order-total-info">
