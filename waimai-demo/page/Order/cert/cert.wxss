@@ -12,6 +12,16 @@
     border-bottom:1px solid #d8d8d8;
     font-size:12px;
 }
+.order-item.gr-title{
+  color: #666;
+}
+.inlin-block{
+  width: 33%;
+  display: inline-block; 
+}
+.txt-right{
+  text-align: right;
+}
 
 
 
