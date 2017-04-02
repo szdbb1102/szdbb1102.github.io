@@ -74,10 +74,10 @@
     "page/Order/cert/cert"
   ],
   "window": {
-    "navigationBarTextStyle": "black",
+    "navigationBarTextStyle": "#fff",
     "navigationBarTitleText": "饭小弟",
-    "navigationBarBackgroundColor": "#fbf9fe",
-    "backgroundColor": "#fbf9fe"
+    "navigationBarBackgroundColor": "#48DD22",
+    "backgroundColor": "#333"
   },
   "tabBar": {
     "color": "#dddddd",

@@ -1,11 +1,27 @@
 <view class="index">
     <view class="fxd-top">
-        站点
+        选择站点
     </view>
+    <swiper indicator-dots="{{indicatorDots}}"
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{adds}}">
+        <swiper-item>
+            <view class="add-item" style='background:{{item.color}};opacity:0.2'>
+            {{item.name}}
+            </view>
+        </swiper-item>
+      </block>
+    </swiper>
     <view class="nav-tab-wrp">
-        <navigator url="../person/historyOrder/historyOrder" class="nav-tab-item active" hover-class="navigator-hover">订单</navigator>
-        <navigator url="../person/youhui/youhui" class="nav-tab-item" hover-class="navigator-hover">优惠券</navigator>
-        <navigator url="../person/my/my" class="nav-tab-item" hover-class="navigator-hover">我的</navigator>
+        <navigator url="../person/historyOrder/historyOrder" class="nav-tab-item active" hover-class="navigator-hover">
+        <span>订单</span>
+        </navigator>
+        <navigator url="../person/youhui/youhui" class="nav-tab-item" hover-class="navigator-hover">
+        <span>优惠券</span>
+        </navigator>
+        <navigator url="../person/my/my" class="nav-tab-item" hover-class="navigator-hover">
+         <span>我的</span>   
+        </navigator>
     </view>
     <view class="menu-wrp">
         <scroll-view scroll-y="true" scroll-into-view="{{toView}}" class="right-side">

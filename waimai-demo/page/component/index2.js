@@ -16,9 +16,14 @@ Page({
                 sort:3
             }
         ],
+        adds: [
+          {name:'',color:'#6A5ACD'},
+          {name:'',color:'#EE82EE'},
+          {name:'',color:'#ADFF2F'}
+        ],
         indicatorDots: true,
         vertical: false,
-        autoplay: false,
+        autoplay: true,
         interval: 3000,
         duration: 1200,
         toView: 'blue',
@@ -67,6 +72,26 @@ Page({
         this.setData({
             'dishes':dishAll,
             'total':total
+        })
+    },
+    changeIndicatorDots: function(e) {
+        this.setData({
+            indicatorDots: !this.data.indicatorDots
+        })
+    },
+    changeAutoplay: function(e) {
+        this.setData({
+            autoplay: !this.data.autoplay
+        })
+    },
+    intervalChange: function(e) {
+        this.setData({
+        interval: e.detail.value
+        })
+    },
+    durationChange: function(e) {
+        this.setData({
+            duration: e.detail.value
         })
     },
     onLoad:function(options){
