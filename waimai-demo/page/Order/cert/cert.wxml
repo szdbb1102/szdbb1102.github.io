@@ -1,9 +1,9 @@
 <view class="order-wrap">
-    <view class="order-block">
+    <view class="order-block top">
         <navigator url="../../person/adress/adress" class="order-item">选择送货地址</navigator>
         <view url="" class="order-item">配送方式(自取点：时代广场一楼)
-            <view class="page-section page-section-gap">
-                <radio-group name="radio">
+            <view class="page-section page-section-gap ">
+                <radio-group name="radio" class='font-12-c666'>
                     <view class='order-item'><radio value="radio1"/>下楼自取   配送费 <text class="">¥{{2}}</text></view>
                     <view class='order-item'><radio value="radio2"/>送餐上门</view>
                 </radio-group>
@@ -11,7 +11,7 @@
         </view>
         <view url="" class="order-item">
             <view class="inlin-block">配送时间</view>
-            <view class="inlin-block">统一派送</view>
+            <view class="inlin-block font-12-c666">统一派送</view>
             <view class="inlin-block txt-right">大约11:30送达</view>
         </view>
     </view>
@@ -19,12 +19,12 @@
         <view url="" class="order-item gr-title">饭小弟</view>
         <view url="" class="order-item">
             <view class="inlin-block">菜品名称</view>
-            <view class="inlin-block">x3</view>
+            <view class="inlin-block font-12-c666">x3</view>
             <view class="inlin-block txt-right">¥99</view>
         </view>
         <view url="" class="order-item">
             <view class="inlin-block">配送费</view>
-            <view class="inlin-block">自取半价配送费</view>
+            <view class="inlin-block font-12-c666">自取半价配送费</view>
             <view class="inlin-block txt-right">¥3</view>
         </view>
         <view url="" class="order-item">
@@ -39,7 +39,7 @@
         </view>
         <view url="" class="order-item">  
             <view class="inlin-block">订单24¥</view>
-            <view class="inlin-block">优惠4¥</view>
+            <view class="inlin-block font-12-c666">优惠4¥</view>
             <view class="inlin-block txt-right">实付20¥</view>
         </view>
         
@@ -48,12 +48,13 @@
 
     <view class="order-cert-wrp">
         <view class="order-total-info">
-            <text>
-                待支付20¥
-            </text>
-            <text>
+        	<view class="topay"><span class="inline-block h100-ver-mid">待支付</span><span class='inline-block total-amount h100-ver-mid'>
+                {{20}}¥
+            </span></view>
+            
+            <!-- <text>
                 已优惠4¥
-            </text>
+            </text> -->
         </view>
         <view class="">
             <navigator url="../Order/cert/cert?title=确认" class="cart-tab-item-btn" hover-class="navigator-hover">提交订单</navigator>

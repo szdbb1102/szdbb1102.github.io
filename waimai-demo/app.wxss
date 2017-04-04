@@ -236,3 +236,16 @@ checkbox, radio{
 .section__ctn{
 
 }
+
+/*自定义*/
+.font-12-c666{
+  font-size: 12px;
+  color: #666;
+}
+.inline-block{
+  display: inline-block;
+}
+.100-ver-mid{
+  height:100rpx;
+  line-height:100rpx
+}

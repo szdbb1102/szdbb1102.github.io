@@ -37,7 +37,6 @@
   display:inline-block;
   width:100%;
   height:14px;
-  border-right:1px solid #ececec;
   line-height:88rpx;
 }
 /*底部浮动*/
@@ -94,7 +93,7 @@
     height: 100rpx;
     line-height: 100rpx;
     font-size: 28rpx;
-    background: #48DD22;
+    background: #3c6;
     color: #fff;
     float: right;
     text-align: center;
@@ -108,7 +107,6 @@
   width:750rpx;
   height: 1000rpx;
   display:flex;
-  margin-top: 88rpx;
   background-color:white;
   flex-direction:row;
 }
@@ -241,6 +239,9 @@
 .flex-ver{
   display:flex;
   
+}
+view{
+    font-family:'微软雅黑'
 }
 
 

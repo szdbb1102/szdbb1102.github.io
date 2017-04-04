@@ -1,13 +1,14 @@
 {
   "pages": [
+
+   
+   
+    "page/person/other/other",
     "page/component/index2",
     "page/person/historyOrder/historyOrder",
     "page/person/my/my",
     "page/person/youhui/youhui",
     "page/person/adress/adress",
-    "page/component/index2",
-    "page/component/index2",
-    "page/component/index2",
     "page/component/component-pages/action-sheet/action-sheet",
     "page/component/component-pages/audio/audio",
     "page/component/component-pages/button/button",
@@ -76,7 +77,7 @@
   "window": {
     "navigationBarTextStyle": "#fff",
     "navigationBarTitleText": "饭小弟",
-    "navigationBarBackgroundColor": "#48DD22",
+    "navigationBarBackgroundColor": "#3c6",
     "backgroundColor": "#333"
   },
   "tabBar": {

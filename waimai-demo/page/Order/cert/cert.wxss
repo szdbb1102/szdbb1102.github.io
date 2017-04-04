@@ -10,7 +10,9 @@
     background:#fff;
     padding:20rpx 30rpx;
     border-bottom:1px solid #d8d8d8;
-    font-size:12px;
+    font-size:14px;
+    color: #333;
+    margin: 0 auto;
 }
 .order-item.gr-title{
   color: #666;
@@ -202,9 +204,24 @@
     display: block;
     height: 100rpx;
     line-height: 100rpx;
-    font-size: 28rpx;
-    background: #f5a22d;
+    font-size: 30rpx;
+    background: #3c6;
     color: #fff;
     float: right;
     text-align: center;
+}
+.top{
+	margin-top:0;
+}
+.topay{
+	text-align: right;
+	padding-right: 10px;
+}
+.total-amount{
+	color: #ff6815;
+	height: 14px;
+}
+.h100-ver-mid{
+  height:100rpx;
+  line-height:100rpx
 }
