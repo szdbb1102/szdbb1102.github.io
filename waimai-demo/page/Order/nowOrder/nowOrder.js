@@ -1,9 +1,9 @@
-// page/person/historyOrder/historyOrder.js
+// page/Order/nowOrder/nowOrder.js
 Page({
   data:{},
-  toBook:function () {
+  toComment:function () {
     wx.navigateTo({
-            url: '../../Order/cert/cert'
+            url: '../comment/comment'
         })
   },
   onLoad:function(options){

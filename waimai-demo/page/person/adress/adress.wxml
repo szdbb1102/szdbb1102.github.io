@@ -1,1 +1,18 @@
-	<view>地址</view>
+	<view class="add">新增收货地址<image class="image" src="../../component/resources/pic/countSelAdd.png" /></view>
+	<view class='zahndian-wrap'>
+		<view class="title">
+			附近站点
+		</view>
+		<view class="body" bindtap="toBook">
+			<view class="tp">苏州创意产业园4栋</view>
+			<view class="bt">当前定位</view>
+		</view>
+		<view class="body" bindtap="toBook">
+			<view class="tp">时代广场</view>
+			<view class="bt">商旅大厦A栋101</view>
+		</view>
+		<view class="body" bindtap="toBook">
+			<view class="tp">时代广场</view>
+			<view class="bt">商旅大厦A栋202</view>
+		</view>
+	</view>

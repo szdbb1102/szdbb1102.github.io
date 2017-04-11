@@ -183,45 +183,8 @@
 }
 
 /*底部浮动*/
-.order-cert-wrp{
-  height: 100rpx;
-  position: fixed;
-  bottom: 0rpx;
-  background: rgba(255, 255, 255, 0.9);
-  display: flex;
-  flex-direction:row;
+.tp-fix{
   width: 100%;
-  z-index: 10;
-  color: black
-}
-
-.order-total-info{
-  width: 550rpx
-}
-
-.cart-tab-item-btn{
-    width: 200rpx;
-    display: block;
-    height: 100rpx;
-    line-height: 100rpx;
-    font-size: 30rpx;
-    background: #3c6;
-    color: #fff;
-    float: right;
-    text-align: center;
-}
-.top{
-	margin-top:0;
-}
-.topay{
-	text-align: right;
-	padding-right: 10px;
-}
-.total-amount{
-	color: #ff6815;
-	height: 14px;
-}
-.h100-ver-mid{
-  height:100rpx;
-  line-height:100rpx
+  position: fixed;
+  bottom: 0;
 }

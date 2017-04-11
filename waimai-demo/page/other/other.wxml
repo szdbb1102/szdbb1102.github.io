@@ -1,0 +1,26 @@
+	<view class='shuohuo-wrap'>
+		<view class="title">
+			您的收货地址
+		</view>
+		<view class="body">
+			<view class="tp">赵胜宽 <span>13915412747</span></view>
+			<view class="bt">创意产业园4栋8楼</view>
+		</view>
+	</view>
+	<view class='zahndian-wrap'>
+		<view class="title">
+			附近站点
+		</view>
+		<view class="body">
+			<view class="tp">苏州创意产业园</view>
+			<view class="bt">当前定位</view>
+		</view>
+		<view class="body">
+			<view class="tp">时代广场</view>
+			<view class="bt">商旅大厦A栋</view>
+		</view>
+		<view class="body">
+			<view class="tp">时代广场</view>
+			<view class="bt">商旅大厦A栋</view>
+		</view>
+	</view>

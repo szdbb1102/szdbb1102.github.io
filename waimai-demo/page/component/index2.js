@@ -34,6 +34,34 @@ Page({
             money:0
         }
     },
+    getLocation: function () {
+    var that = this
+        wx.getLocation({
+          success: function (res) {
+            console.log(res)
+            that.setData({
+              // hasLocation: '时代广场',
+                hasLocation: '选择站点',
+              // location: formatLocation(res.longitude, res.latitude)
+            })
+          },
+          fail:function () {
+              that.setData({
+              hasLocation: '选择站点',
+              // location: formatLocation(res.longitude, res.latitude)
+              })
+          }
+        })
+    },
+    chooseZhanDian:function (event) {
+        console.log('选择站点')
+        let data = event.currentTarget.dataset
+        if(data.haslocation=='选择站点'){
+            wx.navigateTo({
+            url: '../other/other'
+        })
+        }
+    },
     selectMenu:function(event){
         let data = event.currentTarget.dataset
         this.setData({
@@ -99,9 +127,11 @@ Page({
     },
     onReady:function(){
         // 页面渲染完成
+        this.getLocation()
     },
     onShow:function(){
         // 页面显示
+
     },
     onHide:function(){
         // 页面隐藏

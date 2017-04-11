@@ -1,63 +1,58 @@
 <view class="order-wrap">
-    <view class="order-block top">
-        <navigator url="../../person/adress/adress" class="order-item">选择送货地址</navigator>
-        <view url="" class="order-item">配送方式(自取点：时代广场一楼)
-            <view class="page-section page-section-gap ">
-                <radio-group name="radio" class='font-12-c666'>
-                    <view class='order-item'><radio value="radio1"/>下楼自取   配送费 <text class="">¥{{2}}</text></view>
-                    <view class='order-item'><radio value="radio2"/>送餐上门</view>
-                </radio-group>
-              </view>
+<view class="weui-cells weui-cells_after-title">
+            <navigator url="../../person/adress/adress" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+                <view class="weui-cell__bd">选择送货地址</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
         </view>
-        <view url="" class="order-item">
-            <view class="inlin-block">配送时间</view>
-            <view class="inlin-block font-12-c666">统一派送</view>
-            <view class="inlin-block txt-right">大约11:30送达</view>
-        </view>
-    </view>
-    <view class="order-block">
-        <view url="" class="order-item gr-title">饭小弟</view>
-        <view url="" class="order-item">
-            <view class="inlin-block">菜品名称</view>
-            <view class="inlin-block font-12-c666">x3</view>
-            <view class="inlin-block txt-right">¥99</view>
-        </view>
-        <view url="" class="order-item">
-            <view class="inlin-block">配送费</view>
-            <view class="inlin-block font-12-c666">自取半价配送费</view>
-            <view class="inlin-block txt-right">¥3</view>
-        </view>
-        <view url="" class="order-item">
-            <view class="inlin-block">在线立减</view>
-            <view class="inlin-block"></view>
-            <view class="inlin-block txt-right">-¥3</view>
-        </view>
-        <view url="" class="order-item">
-            <view class="inlin-block">优惠券</view>
-            <view class="inlin-block"></view>
-            <view class="inlin-block txt-right">-¥3</view>
-        </view>
-        <view url="" class="order-item">  
-            <view class="inlin-block">订单24¥</view>
-            <view class="inlin-block font-12-c666">优惠4¥</view>
-            <view class="inlin-block txt-right">实付20¥</view>
-        </view>
-        
-    </view>
-    
+<view class="weui-cells__title">配送方式(自取点：时代广场一楼)</view>
+        <view class="weui-cells weui-cells_after-title">
+            <radio-group bindchange="radioChange">
+                <label class="weui-cell weui-check__label" wx:for="{{radioItems}}" wx:key="value">
+                    <radio class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
 
-    <view class="order-cert-wrp">
-        <view class="order-total-info">
-        	<view class="topay"><span class="inline-block h100-ver-mid">待支付</span><span class='inline-block total-amount h100-ver-mid'>
-                {{20}}¥
-            </span></view>
-            
-            <!-- <text>
-                已优惠4¥
-            </text> -->
+                    <view class="weui-cell__bd">{{item.name}}</view>
+                    <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                        <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+                    </view>
+                </label>
+            </radio-group>
         </view>
-        <view class="">
-            <navigator url="../Order/cert/cert?title=确认" class="cart-tab-item-btn" hover-class="navigator-hover">提交订单</navigator>
+<view class="weui-cells__title">配送时间</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__hd">
+                    <image src="{{icon}}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
+                </view>
+                <view class="weui-cell__bd">统一派送</view>
+                <view class="weui-cell__ft">大约11：30送达</view>
+            </view>
         </view>
+
+<view class="weui-cells__title">饭小弟</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">菜品1</view>
+                <view class="weui-cell__ft">¥24x2</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">菜品1</view>
+                <view class="weui-cell__ft">¥24x2</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">配送费</view>
+                <view class="weui-cell__ft">¥2.5</view>
+            </view>
+            <view class="weui-cell">
+                <view class="weui-cell__bd">在线立减</view>
+                <view class="weui-cell__ft">-¥2.5</view>
+            </view>
+        </view>
+    <view class="tp-fix">
+    <view class="weui-form-preview__ft ">
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">辅待支付{{20}}¥</navigator>
+                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">提交订单</navigator>
+            </view>
     </view>
+        
 </view>

@@ -41,3 +41,24 @@
 	position: relative;
 	padding: 20rpx;
 }
+.flex-ver{
+  display:flex;
+  
+}
+.lef-btn,.rig-btn{
+	width: 50%;
+	text-align: center;
+}
+.btm-btn{
+	position: fixed;
+	bottom: 0;
+	font-size: 20px;
+	color: #333;
+	height: 48px;
+	line-height: 48px;
+	width: 100%;
+}
+.rig-btn{
+	background-color: #3c6;
+	color: #fff;
+}

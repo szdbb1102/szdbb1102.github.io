@@ -1,11 +1,6 @@
-// page/person/historyOrder/historyOrder.js
+// page/Order/comment/comment.js
 Page({
   data:{},
-  toBook:function () {
-    wx.navigateTo({
-            url: '../../Order/cert/cert'
-        })
-  },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数
   },

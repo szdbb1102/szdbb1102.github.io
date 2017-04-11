@@ -1,0 +1,32 @@
+	<view class="add">配送中</view>
+	<view class='zahndian-wrap'>
+		<view class="title">
+			饭小弟/时代商旅大厦
+		</view>
+		<view class="body" bindtap="toBook">
+			<view class="tp">饭小弟/时代商旅大厦</view>
+			<view class="bt">饭小弟/时代商旅大厦</view>
+		</view>
+	</view>
+	<view class='zahndian-wrap'>
+		<view class="title">
+			配送信息
+		</view>
+		<view class="body" bindtap="toBook">
+			<view class="tp">配送信息</view>
+			<view class="bt">配送信息</view>
+		</view>
+	</view>
+	<view class='zahndian-wrap'>
+		<view class="title">
+			订单信息
+		</view>
+		<view class="body" bindtap="toBook">
+			<view class="tp">订单信息</view>
+			<view class="bt">订单信息</view>
+		</view>
+	</view>
+	<view class="btm-btn flex-ver">
+		<view class="lef-btn">联系配送员</view>
+		<view class="rig-btn" bindtap='toComment'>确认取餐</view>
+	</view>

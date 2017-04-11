@@ -3,12 +3,13 @@
 
    
    
-    "page/person/other/other",
+    
     "page/component/index2",
     "page/person/historyOrder/historyOrder",
     "page/person/my/my",
-    "page/person/youhui/youhui",
     "page/person/adress/adress",
+    "page/person/youhui/youhui",
+    "page/other/other",
     "page/component/component-pages/action-sheet/action-sheet",
     "page/component/component-pages/audio/audio",
     "page/component/component-pages/button/button",
@@ -72,7 +73,9 @@
     "page/API/open-location/open-location",
 
     "page/API/storage/storage",
-    "page/Order/cert/cert"
+    "page/Order/cert/cert",
+    "page/Order/nowOrder/nowOrder",
+    "page/Order/comment/comment"
   ],
   "window": {
     "navigationBarTextStyle": "#fff",

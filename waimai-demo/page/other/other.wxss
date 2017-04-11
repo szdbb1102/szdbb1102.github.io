@@ -31,13 +31,3 @@
 .zhandian-wrap{
 	padding-left: 10rpx;
 }
-.image{
-	width: 40rpx;
-	height: 40rpx;
-	position: absolute;
-	right: 90rpx;
-}
-.add{
-	position: relative;
-	padding: 20rpx;
-}
