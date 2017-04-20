@@ -50,8 +50,8 @@
         </view>
     <view class="tp-fix">
     <view class="weui-form-preview__ft ">
-                <navigator class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">辅待支付{{20}}¥</navigator>
-                <navigator class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">提交订单</navigator>
+                <view class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">待支付{{20}}¥</view>
+                <view class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active" bindtap="toOrder">提交订单</view>
             </view>
     </view>
         

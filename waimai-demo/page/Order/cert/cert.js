@@ -1,4 +1,5 @@
 const paymentUrl = require('../../../config').paymentUrl
+var server = require('../../../util/server');
 var app = getApp()
 Page({
   data:{
@@ -69,10 +70,27 @@ Page({
       }
     })
   },
-  toOrder:function () {
-    wx.navigateTo({
-            url: '../nowOrder/nowOrder'
-        })
+  toOrder:function (e) {
+    console.log(123)
+		server.sendTemplate(e.detail.formId, null, function (res) {
+			if (res.data.errorcode == 0) {
+				wx.showModal({
+					showCancel: false,
+					title: '恭喜',
+					content: '订单发送成功！下订单过程顺利完成，本例不再进行后续订单相关的功能。',
+					success: function(res) {
+						if (res.confirm) {
+							wx.navigateBack();
+						}
+					}
+				})
+			}
+		}, function (res) {
+			console.log(res)
+		});
+    // wx.navigateTo({
+    //         url: '../nowOrder/nowOrder'
+    //     })
   },
   onLoad:function(options){
     // 页面初始化 options为页面跳转所带来的参数

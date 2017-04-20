@@ -1,35 +1,19 @@
-var app = getApp()
+// page/API/get-user-info/get-user-info.js
 Page({
-  data: {
-    hasUserInfo: false
+  data:{},
+  onLoad:function(options){
+    // 页面初始化 options为页面跳转所带来的参数
   },
-  getUserInfo: function () {
-    var that = this
-
-    if (app.globalData.hasLogin === false) {
-      wx.login({
-        success: _getUserInfo
-      })
-    } else {
-      _getUserInfo()
-    }
-
-    function _getUserInfo() {
-      wx.getUserInfo({
-        success: function (res) {
-          that.setData({
-            hasUserInfo: true,
-            userInfo: res.userInfo
-          })
-          that.update()
-        }
-      })
-    }
+  onReady:function(){
+    // 页面渲染完成
   },
-  clear: function () {
-    this.setData({
-      hasUserInfo: false,
-      userInfo: {}
-    })
+  onShow:function(){
+    // 页面显示
+  },
+  onHide:function(){
+    // 页面隐藏
+  },
+  onUnload:function(){
+    // 页面关闭
   }
 })

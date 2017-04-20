@@ -1,11 +1,7 @@
-/**
- * 小程序配置文件
- */
 
-// 此处主机域名是腾讯云解决方案分配的域名
-// 小程序后台服务解决方案：https://www.qcloud.com/solution/la
 
-var host = "14592619.qcloud.la"
+var host = "test.51yhr.com"
+
 
 var config = {
 
@@ -13,13 +9,34 @@ var config = {
     host,
 
     // 登录地址，用于建立会话
-    loginUrl: `https://${host}/login`,
-
+    loginUrl: `https://${host}/tob/wechat/user/login`,
+    //我的
+    myUrl:'https://${host}/tob/wechat/user/info',
+    //我的优惠券
+    youhuiUrl:'https://${host}/tob/wechat/user/myCoupon' ,
+    //检查商品
+    checkDishUrl:'https://${host}/tob/wechat/product/product/getProductInventory' ,
+    //查询商品列表
+    searchDishUrl:'https://${host}/tob/wechat/product/product/search' ,
+    //订单取消
+    quxiaoUrl:'https://${host}/tob/wechat/business/order/commentOrder' ,
+    //评价
+    commentUrl:'https://${host}/tob/wechat/user/myCoupon' ,
+//前往确认订单页面
+    initOrderUrl:'https://${host}/tob/wechat/business/order/initOrder' ,
+    //我的订单
+    myOrderUrl:'https://${host}/tob/wechat/business/order/myOrder' ,
+//订单详情
+    orderDetailUrl:'https://${host}/tob/wechat/business/order/orderDetail' ,
+    //微信充值
+    rechargeUrl:'https://${host}/tob/wechat/business/order/recharge' ,
+    //订单提交
+    submitUrl:'https://${host}/tob/wechat/business/order/submit' ,
     // 测试的请求地址，用于测试会话
     requestUrl: `https://${host}/testRequest`,
 
     // 用code换取openId
-    openIdUrl: `https://${host}/openid`,
+    openIdUrl: `https://${host}/tob/wechat/user/login`,
 
     // 测试的信道服务接口
     tunnelUrl: `https://${host}/tunnel`,
