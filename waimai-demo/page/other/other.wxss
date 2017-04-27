@@ -1,33 +1,3 @@
-/* page/other/other.wxss */
-
-.title{
-	/*padding-left: 10rpx;*/
-	font-size: 16px;
-	color: #666;
-	background: #ececec;
-	padding: 10rpx;
-
-}
-.body{
-	font-size: 16px;
-	color: #333;	
-	padding: 10rpx;
-	padding-bottom: 0;
-}
-.bt{
-	font-size: 14px;
-	color: #999;
-	border-bottom: 1px solid #d8d8d8;
-	padding-top: 10rpx;
-	padding-bottom: 20rpx;
-}
-.tp{
-	padding-top: 20rpx;
-}
-.shuohuo-wrap{
-	/*padding-left: 10rpx;*/
-
-}
-.zhandian-wrap{
-	padding-left: 10rpx;
+page{
+	background-color: #f8f8f8;
 }

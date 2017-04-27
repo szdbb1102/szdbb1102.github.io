@@ -2,9 +2,10 @@ const openIdUrl = require('./config').loginUrl;
 const server = require('./util/server');
 
 App({
-  onLaunch: function () {
+	onLaunch: function () {
 		console.log('App Launch')
 		var self = this;
+		self.login();
 		var rd_session = wx.getStorageSync('rd_session');
 		console.log('rd_session', rd_session)
 		if (!rd_session) {
@@ -24,80 +25,70 @@ App({
 			})
 		}
 	},
-  onShow: function () {
-    console.log('App Show')
-  },
-  onHide: function () {
-    console.log('App Hide')
-  },
-  globalData: {
-    hasLogin: false,
-    openid: null
-  },
-  // lazy loading openid
-  rd_session: null,
+	onShow: function () {
+	console.log('App Show')
+	},
+	onHide: function () {
+	console.log('App Hide')
+	},
+	globalData: {
+	hasLogin: false,
+	openid: null
+	},
+	// lazy loading openid
+	rd_session: null,
 	login: function() {
 		var self = this;
 		wx.login({
 			success: function (res) {
+				self.globalData.userInfo = res.rawData;
 				console.log('wx.login', res)
-				server.getJSON('/WxAppApi/setUserSessionKey', {code: res.code}, function (res) {
+				server.getJSON('https://outfood.51yhr.com/tob/wechat/common/getSessionKey', {code: res.code}, function (res) {
 					console.log('setUserSessionKey', res)
-					self.rd_session = res.data.data.rd_session;
+					self.rd_session = res.data.target.session_key;
 					self.globalData.hasLogin = true;
+					self.globalData.openid = res.data.target.openid;
 					wx.setStorageSync('rd_session', self.rd_session);
 					self.getUserInfo();
 				});
 			}
 		});
 	},
-  getUserOpenId: function(callback) {
-    var self = this
-
-    if (self.globalData.openid) {
-      callback(null, self.globalData.openid)
-    } else {
-      wx.login({
-        success: function(data) {
-          wx.request({
-            url: openIdUrl,
-            data: {
-              code: data.code
-            },
-            success: function(res) {
-              console.log('拉取openid成功', res)
-              self.globalData.openid = res.data.openid
-              callback(null, self.globalData.openid)
-            },
-            fail: function(res) {
-              console.log('拉取用户openid失败，将无法正常使用开放接口等服务', res)
-              callback(res)
-            }
-          })
-        },
-        fail: function(err) {
-          console.log('wx.login 接口调用失败，将无法正常使用开放接口等服务', err)
-          callback(err)
-        }
-      })
-    }
-  },
-  getUserInfo: function() {
+	getUserInfo: function() {
 		var self = this;
 		wx.getUserInfo({
 			success: function(res) {
 				console.log('getUserInfo', res)
 				self.globalData.userInfo = res.userInfo;
-				server.getJSON('/WxAppApi/checkSignature', {
-					rd_session: self.rd_session,
-					result: res
-				}, function (res) {
+				self.getLocation();
+			}
+		});
+	},
+	getLocation: function () {
+    	var self = this
+        wx.getLocation({
+          success: function (res) {
+            console.log(res)
+          },
+          fail:function () {
+              // that.setData({
+              // hasLocation: '选择站点',
+              // // location: formatLocation(res.longitude, res.latitude)
+              // })
+          },
+          complete:function (res) {
+        	server.postJSON('/tob/wechat/user/login', {loginDto:{
+				  "latitude": res.latitude,
+				  "longitude":res.longitude,
+				  "openid": self.globalData.openid,
+				  "userInfo": self.globalData.userInfo
+				}}, function (res) {
 					console.log('checkSignature', res)
 					if (res.data.errorcode) {
 						// TODO:验证有误处理
 					}
 				});
-			}
-		});
-	}
+          }
+        })
+    },
 })

@@ -2,7 +2,14 @@
 // import dishes from './resources/json/dish.js'
 Page({
     data:{
-        
+        shouhuoItems: [
+            {name: '薛少','phone':'13915412747',adress:'松泽家园八区36栋1602', value: '0',checked: true},
+            {name: '薛鑫','phone':'13915412747',adress:'松泽家园八区36栋1602', value: '0'}
+        ],
+        zhandianItems: [
+            {name: '商旅大厦', value: '0',distance:'1km',checked: true},
+            {name: '时代广场', value: '1',distance:'1.5km'}
+        ]
     },
     getLocation: function () {
     var that = this

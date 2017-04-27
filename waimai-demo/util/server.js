@@ -12,7 +12,7 @@ function __args() {
 		}
 	}
 	if (setting.url.indexOf('https://') !== 0) {
-		setting.url = 'https://test.51yhr.com' + setting.url;
+		setting.url = 'https://www.51yhr.com' + setting.url;
 	}
 	return setting;
 }

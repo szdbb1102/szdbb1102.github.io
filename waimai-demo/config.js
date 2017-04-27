@@ -1,6 +1,6 @@
 
 
-var host = "test.51yhr.com"
+var host = "www.51yhr.com"
 
 
 var config = {
