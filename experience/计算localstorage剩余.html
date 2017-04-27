@@ -18,11 +18,26 @@
 
     </div>
     <script>
-        if(window.localStorage)
-        {
-            var 剩余空间 = 1024 * 1024 * 5 - unescape(encodeURIComponent(JSON.stringify(localStorage))).length;
-            alert(剩余空间/1024);
-        }
+        <!--if(window.localStorage)-->
+        <!--{-->
+            <!--var 剩余空间 = 1024 * 1024 * 5 - unescape(encodeURIComponent(JSON.stringify(localStorage))).length;-->
+            <!--alert(剩余空间/1024);-->
+        <!--}-->
+            var TimeNow = new Date().getTime().toString();
+            function a() {
+                var time = new Date().getTime().toString();
+                TimeNow = time;
+                function b(time,TimeNow) {
+                    var index = 0;
+                    if(TimeNow==time){
+                        setTimeout(function (time,TimeNow) {
+                            console.log(index++)
+                            b(time,TimeNow);
+                        },100)
+                    }
+                }
+            }
+            a();
 
     </script>
 
