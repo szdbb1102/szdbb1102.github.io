@@ -4,8 +4,9 @@ const server = require('./util/server');
 App({
 	onLaunch: function () {
 		console.log('App Launch')
+	},
+	loginFun:function () {
 		var self = this;
-		self.login();
 		var rd_session = wx.getStorageSync('rd_session');
 		console.log('rd_session', rd_session)
 		if (!rd_session) {
@@ -14,9 +15,10 @@ App({
 			wx.checkSession({
 				success: function () {
 					// 登录态未过期
-					console.log('登录态未过期')
-					self.rd_session = rd_session;
-					self.getUserInfo();
+					// console.log('登录态未过期')
+					// self.rd_session = rd_session;
+					// self.getUserInfo();
+					self.login();
 				},
 				fail: function () {
 					//登录态过期
@@ -77,18 +79,20 @@ App({
               // })
           },
           complete:function (res) {
-        	server.postJSON('/tob/wechat/user/login', {loginDto:{
-				  "latitude": res.latitude,
-				  "longitude":res.longitude,
+        	server.postJSON('https://outfood.51yhr.com/tob/wechat/user/login',{
+				  "latitude": res.latitude.toString(),
+				  "longitude":res.longitude.toString(),
 				  "openid": self.globalData.openid,
 				  "userInfo": self.globalData.userInfo
-				}}, function (res) {
+				}, function (res) {
 					console.log('checkSignature', res)
+					self.globalData.loginData = res.data.target;
+					console.log('t',self.globalData.loginData);
 					if (res.data.errorcode) {
 						// TODO:验证有误处理
 					}
 				});
           }
-        })
+        });
     },
 })

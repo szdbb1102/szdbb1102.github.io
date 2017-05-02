@@ -19,7 +19,8 @@ function __args() {
 function __json(method, setting) {
 	setting.method = method;
 	setting.header = {
-		'content-type': 'application/json'
+		'Content-Type': 'application/json',
+		'Accept': 'application/json',
 	};
 	wx.request(setting);
 }
@@ -30,6 +31,28 @@ module.exports = {
 	},
 	postJSON: function () {
 		__json('POST', __args.apply(this, arguments));
+	},
+	getJSONLogin:function (url,data,success,fail) {
+		var app = getApp();
+		var datas = data;
+		datas.token = app.globalData.token;
+		this.postJSON({
+			url: url,
+			data: datas,
+			success: success,   // errorcode==0时发送成功
+			fail: fail
+		});
+	},
+	postJSONLogin:function (url,data,success,fail) {
+		var app = getApp();
+		var datas = data;
+		datas.token = app.globalData.token;
+		this.postJSON({
+			url: url,
+			data: datas,
+			success: success,   // errorcode==0时发送成功
+			fail: fail
+		});
 	},
 	sendTemplate: function(formId, templateData, success, fail) {
 		var app = getApp();

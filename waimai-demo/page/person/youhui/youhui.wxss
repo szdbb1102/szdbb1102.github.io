@@ -1,1 +1,7 @@
 /* page/person/youhui/youhui.wxss */
+.youhui-item:before{
+	left:0
+}
+page{
+	background-color: #f8f8f8;
+}

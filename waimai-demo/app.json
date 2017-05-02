@@ -2,9 +2,11 @@
   "pages": [
     "page/component/index2",
     "page/person/historyOrder/historyOrder",
-    "page/person/my/my",
+     "page/person/my/my",
+    "page/person/money/money",
     "page/person/adress/adress",
     "page/person/youhui/youhui",
+    
     "page/other/other",
     
 

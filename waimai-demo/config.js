@@ -1,6 +1,6 @@
 
 
-var host = "www.51yhr.com"
+var host = "outfood.51yhr.com"
 
 
 var config = {

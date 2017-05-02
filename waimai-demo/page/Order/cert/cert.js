@@ -1,3 +1,4 @@
+const hostURL = require('../../../config').host;
 const paymentUrl = require('../../../config').paymentUrl
 var server = require('../../../util/server');
 var app = getApp()
@@ -92,8 +93,19 @@ Page({
     //         url: '../nowOrder/nowOrder'
     //     })
   },
+  initOrder:function () {//初始化订单
+    var url = hostURL + '/tob/wechat/business/order/initOrder';
+    var data = {
+      buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:0
+    }
+
+    server.postJSONLogin(url,data,function (res) {
+      debugger;
+    })
+
+  },
   onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+    this.initOrder();
   },
   onReady:function(){
     // 页面渲染完成

@@ -1,3 +1,23 @@
-<view class="wrap">
-    我的
+
+<view class='flex-box person-info'>
+	<image class="image touxiang" src="../../component/resources/pic/dish-9.jpg" />
+	<view class="weui-cell__bd">{{name}}</view>
+</view>
+<view class="weui-panel__ft">
+    <navigator  url="../money/money" class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd">我的余额</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </navigator>
+</view>
+<view class="weui-panel__ft">
+    <view class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd">客服电话:13915412747</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
+</view>
+<view class="weui-panel__ft bd-bottom">
+    <view class="weui-cell weui-cell_access weui-cell_link">
+        <view class="weui-cell__bd">工作时间10：00—14：00</view>
+        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+    </view>
 </view>

@@ -1,3 +1,24 @@
-<view class="wrap">
-    优惠
-</view>
+<view class="weui-panel__bd bd-bottom bg-fff"  wx:for="{{youhuiItems}}">
+		<view class="weui-cell flex-box bg-ddd" >
+        </view>
+        <!-- <navigator url="" class="weui-media-box weui-media-box_appmsg flex-box" hover-class="weui-cell_active">
+            <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
+                <image class="weui-media-box__thumb" src="{{icon60}}" />
+            </view>
+            <view class="weui-media-box__bd weui-media-box__bd_in-appmsg flex2">
+                <view class="weui-media-box__title">{{item.locat}}</view>
+                <view class="weui-media-box__desc">{{item.createTime}}</view>
+            </view>
+            <view class='flex1 small-66-font txt-right'>{{item.orderStat}}</view>
+        </navigator> -->
+        <view class="weui-cell flex-box youhui-item">
+        	<view class='flex4 small-66-font txt-left'>
+        		<view class='mid-33-font'>餐饮优惠券</view>
+        		<view>有效期至{{item.toTime}}</view>
+        	</view>
+        	<view class='flex1 small-66-font txt-center'>
+	        	<view class='mid-yellow-font'>¥{{item.num}}</view>
+        		<view>满{{item.total}}可用</view>
+        	</view>
+        </view>
+    </view>

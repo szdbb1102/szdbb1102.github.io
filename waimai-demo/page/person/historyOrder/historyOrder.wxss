@@ -1,1 +1,10 @@
 /* page/person/historyOrder/historyOrder.wxss */
+.weui-media-box__title{
+	font-size: 14px;
+}
+page{
+	background-color: #f8f8f8;
+}
+.weui-media-box::before{
+	left: 0
+}

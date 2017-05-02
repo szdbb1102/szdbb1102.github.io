@@ -1,33 +1,7 @@
-import menus from './resources/json/menus.js'
+// import menus from './resources/json/menus.js'
 Page({
   data:{
-    text:"Page main",
-    background: [
-      {
-        color:'green',
-        sort:1
-      }, 
-      {
-        color:'red',
-        sort:2
-      },
-      {
-        color:'yellow',
-        sort:3
-      }
-      ],
-    indicatorDots: true,
-    vertical: false,
-    autoplay: true,
-    interval: 3000,
-    duration: 1200,
-    toView: 'blue',
-    'menus':menus,
-    selectedMenuId:1,
-    total:{
-      count:0,
-      money:0
-    }
+    
   },
   selectMenu:function(event){
     let data = event.currentTarget.dataset

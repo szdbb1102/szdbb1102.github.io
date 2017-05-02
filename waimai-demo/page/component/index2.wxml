@@ -1,6 +1,8 @@
+
+<view wx:if="{{hasLogin}}">
 <view class="index">
     <view class="fxd-top" bindtap="chooseZhanDian" data-hasLocation='{{hasLocation}}'>
-        {{hasLocation}}
+        选择站点
     </view>
     <swiper indicator-dots="{{indicatorDots}} style='margin-top:20px'
       autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -79,4 +81,5 @@
             <navigator url="../Order/cert/cert?title=确认" class="cart-tab-item-btn" hover-class="navigator-hover">选好了</navigator>
         </view>
     </view>
+</view>
 </view>
