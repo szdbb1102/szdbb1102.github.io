@@ -21,7 +21,8 @@
   height: 300rpx;
 }
 .nav-tab-wrp{
-  height: 88rpx;
+  height: 18px;
+  padding:18px 0;
   width: 100%;
   display: flex;
   flex-direction:row;
@@ -31,14 +32,17 @@
 .nav-tab-item{
   width: 250rpx;
   text-align: center;
-  line-height: 88rpx;
+  /*line-height: 88rpx;*/
   color: rgb(102, 102, 102);
 }
 .nav-tab-item span{
   display:inline-block;
   width:100%;
-  height:14px;
-  line-height:88rpx;
+  font-size:16px;
+  line-height:16px;
+
+  /*height:14px;*/
+  /*line-height:88rpx;*/
 }
 /*底部浮动*/
 .cart-tab-wrp{
@@ -173,7 +177,8 @@
   justify-content:space-between;
 }
 .dish-item-pic{
-  width:158rpx;
+  /*width:158rpx;*/
+  min-height: 180px;
 }
 .dish-item-pic image{
    width: 158rpx;
@@ -185,8 +190,8 @@
   padding-left: 16rpx
 }
 .dish-item-name{
-  color: #454545;
-  font-size: 26rpx;
+  color:#454545;
+font-size:52rpx;
 }
 .dish-item-sales{
   color: #ccc;
@@ -206,7 +211,7 @@
   width: 220rpx;
   display: flex;
   font-size: 26rpx;
-  padding: 60rpx 0 0 10rpx;
+  padding: 17rpx 0 0 10rpx;
 }
 .dish-item-tab{
   width: 60rpx;
@@ -244,6 +249,19 @@
 view{
     font-family:'微软雅黑'
 }
+/*未授权*/
+.weui-form-preview__label{
+  float:left;
+  margin-right:1em;
+  min-width:4em;
+  color:#999999;
+  width:100%;
+  text-align:center;
+  text-align-last:auto;
 
+}
+.weui-form-preview__value{
+  text-align:left;
+}
 
 

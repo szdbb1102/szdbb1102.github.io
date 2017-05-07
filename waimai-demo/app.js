@@ -66,6 +66,14 @@ App({
 			}
 		});
 	},
+	// todo
+	//1.默认站点数据
+	// 1.1 收货地址与站点数据统一
+	//2.initorder数据绑定---tobook,配送，总价
+	//3.新增编辑收货地址
+	//4.下单与支付
+	//5.跳转到订单详情
+	//6.订单列表与订单详情
 	getLocation: function () {
     	var self = this
         wx.getLocation({

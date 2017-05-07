@@ -9,7 +9,8 @@
   height: 300rpx;
 }
 .nav-tab-wrp{
-  height: 88rpx;
+  height: 18rpx;
+  padding:18rpx 0;
   width: 100%;
   display: flex;
   flex-direction:row;

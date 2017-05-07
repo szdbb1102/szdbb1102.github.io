@@ -6,9 +6,11 @@ Page({
   data:{
     text:"Page main",
     radioItems: [
-            {name: '下楼自取（配送费2.5元）', value: '0'},
-            {name: '送餐上门（配送费5元）', value: '1', checked: true}
+            {name: '下楼自取（配送费2.5元）', value: '0',fee:2.5},
+            {name: '送餐上门（配送费5元）', value: '1', fee:5,checked: true}
         ],
+    youhui:[]
+
   },
   radioChange: function (e) {
         console.log('radio发生change事件，携带value值为：', e.detail.value);
@@ -16,6 +18,11 @@ Page({
         var radioItems = this.data.radioItems;
         for (var i = 0, len = radioItems.length; i < len; ++i) {
             radioItems[i].checked = radioItems[i].value == e.detail.value;
+            if(radioItems[i].value == e.detail.value){
+              this.setData({
+                postFee:radioItems[i].fee
+              })
+            }
         }
 
         this.setData({
@@ -94,17 +101,52 @@ Page({
     //     })
   },
   initOrder:function () {//初始化订单
+    var self = this;
+    this.setData({morenShouHuo:app.globalData.loginData.deliveryAddresses[0]})
     var url = hostURL + '/tob/wechat/business/order/initOrder';
     var data = {
-      buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:0
+      buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:1
     }
 
     server.postJSONLogin(url,data,function (res) {
-      debugger;
+        var data = res.data.target;
+        var youhui = [];
+        if(data.selfTake){
+          var radioItems = [
+              {name: '下楼自取（配送费'+data.selfTakeFee+'元）', value: '0',fee:data.selfTakeFee},
+              {name: '送餐上门（配送费'+data.commonDoorFee+'元）', value: '1', checked: true,fee:data.commonDoorFee}
+          ]
+          for (var i = 0, len = radioItems.length; i < len; ++i) {
+              if(radioItems[i].value == true){
+                  self.setData({
+                      postFee:radioItems[i].fee
+                  })
+              }
+          }
+          self.setData({radioItems:radioItems})
+        }
+        if(data.hasFirstOrder){
+          youhui.push('首单优惠')
+        }
+        if(data.man<=self.data.tobook.total.money){
+            youhui.push('满减优惠')
+        }
+        //todo 优惠券
+        if(data.salesCouponDetails.length>0){
+          youhui.push('使用优惠券')
+        }
+        self.setData({initOrder:data,youhui:youhui})
     })
 
   },
+  chooseYouHui:function () {
+
+  },
   onLoad:function(options){
+    console.log(options);
+    this.setData({
+      tobook:JSON.parse(options.tobook)
+    })
     this.initOrder();
   },
   onReady:function(){

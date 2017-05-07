@@ -12,15 +12,17 @@ function __args() {
 		}
 	}
 	if (setting.url.indexOf('https://') !== 0) {
-		setting.url = 'https://www.51yhr.com' + setting.url;
+		setting.url = 'https://' + setting.url;
 	}
 	return setting;
 }
 function __json(method, setting) {
+	var app = getApp();
 	setting.method = method;
 	setting.header = {
 		'Content-Type': 'application/json',
 		'Accept': 'application/json',
+		'token':app.globalData.token?app.globalData.token:''
 	};
 	wx.request(setting);
 }
@@ -46,7 +48,7 @@ module.exports = {
 	postJSONLogin:function (url,data,success,fail) {
 		var app = getApp();
 		var datas = data;
-		datas.token = app.globalData.token;
+		// datas.token = app.globalData.token;
 		this.postJSON({
 			url: url,
 			data: datas,

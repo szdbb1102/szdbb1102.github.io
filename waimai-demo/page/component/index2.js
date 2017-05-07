@@ -35,7 +35,9 @@ Page({
             count:0,
             money:0
         },
-        hasLogin:false
+        serverError:false,
+        hasLogin:false,
+        tobook:{}
     },
     loginFun:function () {
         var self = this;
@@ -78,7 +80,12 @@ Page({
                     self.globalData.openid = res.data.target.openid;
                     wx.setStorageSync('rd_session', self.rd_session);
                     self.getUserInfo();
+                },function () {
+                self.errorFun(self);
                 });
+            },
+            fail:function () {
+                self.errorFun(self);
             }
         });
     },
@@ -112,6 +119,22 @@ Page({
                   "userInfo": self.globalData.userInfo
                 }, function (res) {
                     console.log('checkSignature', res)
+                    wx.hideLoading();
+                    res.data.target.deliveryAddresses[0]= {"buildingId": 1,
+                        "contactNumber": "string",
+                        "contacts": "string",
+                        "createTime": "2017-05-07T15:09:38.649Z",
+                        "createdBy": "string",
+                        "defaultFlag": 0,
+                        "floor": "4栋",
+                        "id": 1,
+                        "merchantId": 0,
+                        "room": "802",
+                        "sex": 0,
+                        "status": 0,
+                        "updateTime": "2017-05-07T15:09:38.649Z",
+                        "updatedBy": "string"
+                    }
                     self.globalData.loginData = res.data.target;
                     getApp().globalData.loginData = res.data.target;
                     getApp().globalData.token = res.data.target.token;
@@ -194,9 +217,11 @@ Page({
         dishCur.count += 1;
         total.count += 1
         total.money += dishCur.price
+        var tobook = this.getOrderParam();
         this.setData({
             'dishes':dishAll,
-            'total':total
+            'total':total,
+            'tobook':JSON.stringify(tobook)
         })
     },
     minusCount:function(event){
@@ -211,9 +236,44 @@ Page({
         dishCur.count -= 1;
         total.count -= 1
         total.money -= dishCur.price
+        var tobook = this.getOrderParam();
         this.setData({
             'dishes':dishAll,
-            'total':total
+            'total':total,
+            'tobook':JSON.stringify(tobook)
+        })
+    },
+    getOrderParam:function(){//获取下单参数
+        let total = this.data.total
+        let dishAll = this.data.dishes
+        let tobook = {detail:[],total:total};
+        for (var i = 0; i < dishAll.length; i++) {
+            if(dishAll[i].count>0){
+                tobook.detail.push(dishAll[i])
+            }
+        }
+        return tobook;
+    },
+    tobook:function () {//提交订单
+    	if(this.data.total.count!=0){
+    		wx.navigateTo({
+            	url: '../Order/cert/cert?tobook='+this.data.tobook
+        	})
+    	}
+    },
+    reLogin:function () {//重新授权
+    	this.setData({
+    		serverError:false
+    	})
+    	wx.showLoading({
+          title: '加载中',
+        })
+        this.loginFun();
+    },
+    errorFun:function (scope) {
+        wx.hideLoading();
+        scope.setData({
+            serverError:true
         })
     },
     changeIndicatorDots: function(e) {
@@ -237,6 +297,9 @@ Page({
         })
     },
     onLoad:function(options){
+        wx.showLoading({
+          title: '加载中',
+        })
         this.loginFun();
         // 页面初始化 options为页面跳转所带来的参数
     },
