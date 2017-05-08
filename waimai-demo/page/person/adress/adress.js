@@ -50,7 +50,7 @@ Page({
 	      	buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:1,
 	  		"contactNumber": "13915412747",
 	  		"contacts": "薛鑫",
-	  		"floor": "3楼",
+	  		"floor": "3",
 	  		"room": "302",
 	  		"sex": 0
 	    }
@@ -86,8 +86,8 @@ Page({
             buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:1,
             "contactNumber": "13915412747",
             "contacts": "薛鑫",
-            "floor": "3楼",
-            "room": "302",
+            "floor": 3,
+            "room": 302,
             "sex": 0
         }
         function setShuoHuo(data) {
