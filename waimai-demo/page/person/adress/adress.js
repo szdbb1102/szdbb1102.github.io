@@ -43,6 +43,7 @@ Page({
 	        })
   	},
   	addNewAdress:function () {//todo ------0
+        var self = this;
   		this.setData({addState:1})
   		var url = hostURL + '/tob/wechat/business/order/addOrModfiyDeliveryAddress';
 	    var data = {
@@ -53,11 +54,48 @@ Page({
 	  		"room": "302",
 	  		"sex": 0
 	    }
-
+        function setShuoHuo(data) {
+            data.value = 1;
+            self.setData({shouhuoItems:[data]})
+        }
+        setShuoHuo(data);
 	    server.postJSONLogin(url,data,function (res) {
-	      
 	    })
   	},
+    submitAdd:function () {//todo ---获取表单数据---2
+        var self = this;
+        this.setData({addState:3})
+        var data = {
+            buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:1,
+            "contactNumber": "13915412747",
+            "contacts": "薛鑫",
+            "floor": "3楼",
+            "room": "302",
+            "sex": 0
+        }
+        function setShuoHuo(data) {
+            data.value = 1;
+            self.setData({shouhuoItems:[data],addState:3})
+        }
+        setShuoHuo(data);
+    },
+    submitEdit:function () {//todo ---获取表单数据---2
+        var self = this;
+        this.setData({addState:3})
+        var data = {
+            buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:1,
+            "contactNumber": "13915412747",
+            "contacts": "薛鑫",
+            "floor": "3楼",
+            "room": "302",
+            "sex": 0
+        }
+        function setShuoHuo(data) {
+            data.value = 1;
+            self.setData({shouhuoItems:[data],addState:3})
+        }
+        setShuoHuo(data);
+    },
     editAdress:function () {//编辑收货地址
         //todo 获取数据，设置编辑区块数据，提交修改---添加收货地址栏icon,绑定数据----0
 

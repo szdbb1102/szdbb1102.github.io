@@ -83,7 +83,7 @@
             </view>
 
             <view class="weui-btn-area">
-            	<button class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+            	<button bindtap="submitAdd" class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
         	</view>
         </view>
    </view>
@@ -138,7 +138,7 @@
             </view>
 
             <view class="weui-btn-area">
-            	<button class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+            	<button bindtap="submitEdit" class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
         	</view>
         </view>
    </view>
