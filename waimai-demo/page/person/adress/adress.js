@@ -47,13 +47,15 @@ Page({
   		this.setData({addState:1})
   		var url = hostURL + '/tob/wechat/business/order/addOrModfiyDeliveryAddress';
 	    var data = {
-	      	buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:1,
-	  		"contactNumber": "13915412747",
-	  		"contacts": "薛鑫",
-	  		"floor": "3",
-	  		"room": "302",
-	  		"sex": 0
-	    }
+            "contacts":"朱杰",
+            "contactNumber":"18913165266",
+            "sex":1,
+            "buildingId":1,
+            "floor":"12",
+            "room":"1104",
+            "defaultFlag":"1",
+            "status":"1"
+        }
         function setShuoHuo(data) {
             data.value = 1;
             self.setData({shouhuoItems:[data]})

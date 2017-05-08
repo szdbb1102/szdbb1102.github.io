@@ -1,6 +1,7 @@
 // import dishes from './resources/json/dish.js'
 const openIdUrl = require('../../config').loginUrl;
 const server = require('../../util/server');
+const app = getApp();
 Page({
     data:{
         text:"Page main",
@@ -78,6 +79,7 @@ Page({
                     self.rd_session = res.data.target.session_key;
                     self.globalData.hasLogin = true;
                     self.globalData.openid = res.data.target.openid;
+                    app.globalData.openid = res.data.target.openid;
                     wx.setStorageSync('rd_session', self.rd_session);
                     self.getUserInfo();
                 },function () {

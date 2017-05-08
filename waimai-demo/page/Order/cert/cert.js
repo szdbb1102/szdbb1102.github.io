@@ -38,48 +38,39 @@ Page({
     // this.data.toView = 'red'
   },
   requestPayment: function() {
-    var self = this
-
-    self.setData({
-      loading: true
-    })
-    // 此处需要先调用wx.login方法获取code，然后在服务端调用微信接口使用code换取下单用户的openId
-    // 具体文档参考https://mp.weixin.qq.com/debug/wxadoc/dev/api/api-login.html?t=20161230#wxloginobject
-    app.getUserOpenId(function(err, openid) {
-      console.log('xx')
-      if (!err) {
-        wx.request({
-          url: paymentUrl,
-          data: {
-            openid
-          },
-          method: 'POST',
-          success: function(res) {
-            console.log('unified order success, response is:', res)
-            var payargs = res.data.payargs
-            wx.requestPayment({
+    var self = this;
+      wx.requestPayment({
               timeStamp: payargs.timeStamp,
               nonceStr: payargs.nonceStr,
               package: payargs.package,
               signType: payargs.signType,
               paySign: payargs.paySign
-            })
-
-            self.setData({
-              loading: false
-            })
-          }
-        })
-      } else {
-        console.log('err:', err)
-        self.setData({
-          loading: false
-        })
-      }
-    })
+          })
   },
   toOrder:function (e) {
     console.log(123)
+      var self = this;
+      this.setData({addState:1})
+      var url = hostURL + '/tob/wechat/business/order/submit';
+      var data = {
+          'openid':app.globalData.openid,
+          'currUrl':'page/Order/cert/cert',
+          "activityFlag": 1,
+          "buildingId": 1,
+          "commonDoorFlag": true,
+          "deliveryAddressId": 1,
+          "orderRemark": "尽快",
+          "paymentType": 10,
+          "products": [
+              {
+                  "counts": 4,
+                  "id": 1
+              }
+          ],
+          "receiverTime": "2017-05-09 12:29",
+      }
+      server.postJSONLogin(url,data,function (res) {
+      })
 		server.sendTemplate(e.detail.formId, null, function (res) {
 			if (res.data.errorcode == 0) {
 				wx.showModal({
