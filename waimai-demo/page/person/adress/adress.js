@@ -42,7 +42,7 @@ Page({
 	            url: '../../Order/cert/cert'
 	        })
   	},
-  	addNewAdress:function () {
+  	addNewAdress:function () {//todo ------0
   		this.setData({addState:1})
   		var url = hostURL + '/tob/wechat/business/order/addOrModfiyDeliveryAddress';
 	    var data = {
@@ -58,6 +58,13 @@ Page({
 	      
 	    })
   	},
+    editAdress:function () {//编辑收货地址
+        //todo 获取数据，设置编辑区块数据，提交修改---添加收货地址栏icon,绑定数据----0
+
+    },
+    switchShouHuo:function () {//选择收货地址
+        //todo 切换，携带id----0
+    },
     getLocation: function () {
     var that = this
         wx.getLocation({

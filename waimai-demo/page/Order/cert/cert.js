@@ -96,9 +96,6 @@ Page({
 		}, function (res) {
 			console.log(res)
 		});
-    // wx.navigateTo({
-    //         url: '../nowOrder/nowOrder'
-    //     })
   },
   initOrder:function () {//初始化订单
     var self = this;
@@ -165,3 +162,9 @@ Page({
     console.log(e)
   }
 })
+
+//todo 展示提交订单前数据，提交订单-------0
+//1.选择不同优惠方式----优惠券时展示优惠券选择栏-----
+//2.计算订单明细---配送费、优惠明细
+//3.下单前验证未填选项
+//4.支付工作处理-------1

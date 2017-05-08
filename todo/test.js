@@ -1,29 +1,13 @@
-var arr  = "4.57 s326 ms1.24 s10.69 s10.85 s1.64 s10.67 s608 ms3.30 s 2.86 s353 ms373 ms2.09 s467 ms1.06 s749 ms352 ms373 ms";
-arr=arr.replace(' ','');
+// todo
+//1.es6
+//1.1环境
+//ff浏览器---Symbol.iterator
+//class---super---reactjs----proxy
+//1.2实践---vue,reactjs,小程序
+
+//2.框架
+//2.1外在---coffeescript typescript
+//2.2自己---小程序ui---商城搭建
 
 
-
-var a =[1,2,3,4,5,6,7];
-var b = [1,8,9,2];
-_.each(b, function (num) {
-    var flg = _.every(a, function (num2) {
-        num2!=num;
-    });
-    if(flg){
-        a.push(num)
-    }
-});
-
-function ajax(length,index) {
-    length++;
-    console.log('length',length);
-    console.log('index',index);
-    a(length,index);
-}
-function a(length,index) { //a recursive function
-    if(length==index){
-        return
-    }
-    setTimeout(ajax(length,index),1000);
-}
-a(1,10);
+//3.英语
