@@ -37,7 +37,9 @@ module.exports = {
 	getJSONLogin:function (url,data,success,fail) {
 		var app = getApp();
 		var datas = data;
-		datas.token = app.globalData.token;
+		if(app.globalData.token){
+            datas.token = app.globalData.token;
+		}
 		this.postJSON({
 			url: url,
 			data: datas,

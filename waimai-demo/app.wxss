@@ -1,5 +1,5 @@
 .index{
-    background-color: #FBF9FE;
+   
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
     max-height: 100%;
     font-size: 32rpx;
@@ -1362,4 +1362,8 @@ font-size:14px;
 }
 .bf100{
   width: 100%;
+}
+.image_icon{
+  width: 20px;
+  height: 20px;
 }

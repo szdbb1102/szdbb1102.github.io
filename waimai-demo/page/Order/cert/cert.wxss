@@ -1,5 +1,10 @@
 .order-wrap{
     background:#F8F8F8;
+  height: 1000rpx;
+  /*overflow: hidden;*/
+}
+.scroll-wrap{
+  height: 120%;
 }
 .order-block{
     border-top:1px solid #d8d8d8;

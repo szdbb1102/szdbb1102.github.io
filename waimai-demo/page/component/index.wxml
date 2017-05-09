@@ -1,1 +1,103 @@
-    <view>123</view>
+
+<view wx:if="{{hasLogin}}">
+<view class="index">
+    <view class="fxd-top flex-box" bindtap="chooseZhanDian" >
+        <image class="image_icon" src="resources/pic/ico_location.png" />
+        <text>{{hasLocation}}</text>
+    </view>
+    <swiper indicator-dots="{{indicatorDots}} style='margin-top:20px'
+      autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{adds}}">
+        <swiper-item>
+            <view class="add-item" style='background:{{item.color}};'>
+            {{item.name}}
+            </view>
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class="nav-tab-wrp">
+        <navigator url="../person/historyOrder/historyOrder" class="nav-tab-item active" hover-class="navigator-hover">
+        <span>订单</span>
+        </navigator>
+        <navigator url="../person/youhui/youhui" class="nav-tab-item" hover-class="navigator-hover">
+        <span>优惠券</span>
+        </navigator>
+        <navigator url="../person/my/my" class="nav-tab-item" hover-class="navigator-hover">
+         <span>我的</span>   
+        </navigator>
+    </view>
+    <view class="menu-wrp">
+        <scroll-view scroll-y="true" scroll-into-view="{{toView}}" class="right-side">
+            <view class="dish-header"></view>
+            <block wx:for="{{dishes}}"  wx:key="id" wx:for-item="dish">
+                <view>
+                        <view class="dish-item">
+                            <view class="dish-item-wrp flex-box">
+                                <view class="dish-item-pic bf100">
+                                    <image class="image" src="resources/pic/{{dish.pic}}" />
+                                </view>
+                                <view class="dish-item-info flex2 flex-box" style="">
+                                    <view class='bf100'>
+                                        <text class="dish-item-name">{{dish.name}}</text>
+                                    </view>
+                                    <view class='flex1'>
+                                        <text class="dish-item-money">¥{{dish.price}}</text>
+                                    </view>
+                                    <view class='flex2'>
+                                        <text class="dish-item-sales">月销量{{dish.sales}}</text>
+                                    </view>
+                                </view>
+                                <view class="dish-item-count flex1" style="">
+                                    <view class="dish-item-tab">
+                                        <view hidden="{{dish.count == 0}}" class="dish-item-count-minus" data-id="{{dish.id}}"
+                                              data-cid="{{menu.id}}" bindtap="minusCount">
+                                            <image class="image" src="resources/pic/countMinus.png" />
+                                        </view>
+                                    </view>
+                                    <view class="dish-item-count-text dish-item-tab">
+                                        <text hidden="{{dish.count == 0}}">{{dish.count}}</text>
+                                    </view>
+                                    <view class="dish-item-count-plus" data-id="{{dish.id}}"
+                                          data-cid="{{menu.id}}" bindtap="addCount">
+                                        <image class="image" src="resources/pic/countSelAdd.png" />
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+
+                </view>
+            </block>
+            <view class="dish-footer"></view>
+        </scroll-view>
+    </view>
+    <view class="cart-tab-wrp">
+        <view class="cart-item-total cart-tab-item">
+            <view class="cart-item-icon-wrp">
+                <image class="cart-item-icon" src="./resources/pic/orderBox.png" />
+                <text hidden="{{total.count}}" class="cart-item-total-num bc_red">{{total.count}}</text>
+            </view>
+            <text class="cart-item-total-price">￥{{total.money}}</text>
+        </view>
+        <view class="cart-tab-item">
+            <view  bindtap='tobook' url="../Order/cert/cert?tobook={{tobook}}" class="cart-tab-item-btn" hover-class="navigator-hover">选好了</view>
+        </view>
+    </view>
+</view>
+</view>
+<view wx:if="{{serverError}}">
+<view class="weui-form-preview">
+            <view class="weui-form-preview__hd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__label">授权失败</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__bd">
+                <view class="weui-form-preview__item">
+                    <view class="weui-form-preview__value">需要允许微信登录和地理位置信息才能为您提供服务</view>
+                </view>
+            </view>
+            <view class="weui-form-preview__ft">
+                <view bindtap="reLogin" class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active">点击重新授权</view>
+            </view>
+        </view>
+    </view>

@@ -1,7 +1,7 @@
 {
   "pages": [
     
-    "page/component/index2",
+    "page/component/index",
     "page/person/historyOrder/historyOrder",
      "page/person/my/my",
     "page/person/money/money",
@@ -25,34 +25,8 @@
     "navigationBarBackgroundColor": "#3c6",
     "backgroundColor": "#333"
   },
-  "tabBar": {
-    "color": "#dddddd",
-    "selectedColor": "#3cc51f",
-    "borderStyle": "black",
-    "backgroundColor": "#ffffff",
-    "list": [
-        {
-          "pagePath": "page/component/index",
-          "iconPath": "image/mealNormal.png",
-          "selectedIconPath": "image/mealSelect.png",
-          "text": "外卖"
-        }, 
-        {
-          "pagePath": "page/API/index/index",
-          "iconPath": "image/orderListNormal.png",
-          "selectedIconPath": "image/orderListSelect.png",
-          "text": "订单"
-        },
-        {
-          "pagePath":"page/component/component-pages/scroll-view/scroll-view",
-          "iconPath": "image/myNormal.png",
-          "selectedIconPath": "image/mySelect.png",
-          "text": "我的"
-        }
-    ]
-  },
   "networkTimeout": {
-    "request": 10000,
+    "request": 20000,
     "connectSocket": 10000,
     "uploadFile": 10000,
     "downloadFile": 10000
