@@ -37,14 +37,16 @@ Page({
     })
     // this.data.toView = 'red'
   },
-  requestPayment: function() {
-    var self = this;
+  requestPayment: function(data) {
+      var self = this;
+      var payargs = JSON.parse(data);
       wx.requestPayment({
               timeStamp: payargs.timeStamp,
               nonceStr: payargs.nonceStr,
-              package: payargs.package,
+              package: payargs.packageStr,
               signType: payargs.signType,
-              paySign: payargs.paySign
+              paySign: payargs.paySign,
+              complete: function (res) {console.log('支付完成') }
           })
   },
   toOrder:function (e) {
@@ -55,7 +57,7 @@ Page({
       var data = {
           'openid':app.globalData.openid,
           'currUrl':'page/Order/cert/cert',
-          "activityFlag": 1,
+          "activityFlag": 2,
           "buildingId": 1,
           "commonDoorFlag": true,
           "deliveryAddressId": 1,
@@ -63,30 +65,16 @@ Page({
           "paymentType": 10,
           "products": [
               {
-                  "counts": 4,
+                  "counts": 3,
                   "id": 1
               }
           ],
-          "receiverTime": "2017-05-09 12:29",
+          "receiverTime": "2017-05-13 12:30",
       }
       server.postJSONLogin(url,data,function (res) {
+        var payData = res.data.target.wechatPayInfo;
+        self.requestPayment(payData)
       })
-		server.sendTemplate(e.detail.formId, null, function (res) {
-			if (res.data.errorcode == 0) {
-				wx.showModal({
-					showCancel: false,
-					title: '恭喜',
-					content: '订单发送成功！下订单过程顺利完成，本例不再进行后续订单相关的功能。',
-					success: function(res) {
-						if (res.confirm) {
-							wx.navigateBack();
-						}
-					}
-				})
-			}
-		}, function (res) {
-			console.log(res)
-		});
   },
   initOrder:function () {//初始化订单
     var self = this;

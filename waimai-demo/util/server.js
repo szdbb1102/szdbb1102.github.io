@@ -37,10 +37,10 @@ module.exports = {
 	getJSONLogin:function (url,data,success,fail) {
 		var app = getApp();
 		var datas = data;
-		if(app.globalData.token){
-            datas.token = app.globalData.token;
-		}
-		this.postJSON({
+		// if(app.globalData.token){
+  //           datas.token = app.globalData.token;
+		// }
+    this.getJSON({
 			url: url,
 			data: datas,
 			success: success,   // errorcode==0时发送成功

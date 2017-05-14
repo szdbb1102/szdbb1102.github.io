@@ -9,7 +9,6 @@
     "page/person/youhui/youhui",
     
     "page/other/other",
-    
 
     "page/API/login/login",
     "page/API/get-user-info/get-user-info",
@@ -26,7 +25,7 @@
     "backgroundColor": "#333"
   },
   "networkTimeout": {
-    "request": 20000,
+    "request": 60000,
     "connectSocket": 10000,
     "uploadFile": 10000,
     "downloadFile": 10000

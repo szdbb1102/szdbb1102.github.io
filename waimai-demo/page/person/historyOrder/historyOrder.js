@@ -1,4 +1,8 @@
 // page/person/historyOrder/historyOrder.js
+const server = require('../../../util/server');
+const config = require('../../../config');
+import orderData from 'data.js'
+const app = getApp();
 Page({
   data:{
         shouhuoItems: [
@@ -11,6 +15,12 @@ Page({
         ]
     },
   onLoad:function(options){
+    console.log(orderData);
+    server.postJSONLogin(config.myOrderUrl,{
+      
+    }, function (res) {
+        console.log(orderData);
+    });
     // 页面初始化 options为页面跳转所带来的参数
   },
   onReady:function(){

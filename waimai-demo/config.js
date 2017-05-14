@@ -1,7 +1,7 @@
 
 
 var host = "outfood.51yhr.com"
-
+var hostWithHttps = 'https://outfood.51yhr.com/'
 
 var config = {
 
@@ -9,34 +9,36 @@ var config = {
     host,
 
     // 登录地址，用于建立会话
-    loginUrl: `https://${host}/tob/wechat/user/login`,
+    loginUrl: hostWithHttps+ 'tob/wechat/user/login',
+    //地址添加编辑
+    addAdressUrl:hostWithHttps+ 'tob/wechat/business/order/addOrModfiyDeliveryAddress',
     //我的
-    myUrl:'https://${host}/tob/wechat/user/info',
+    myUrl:hostWithHttps+ 'tob/wechat/user/info',
     //我的优惠券
-    youhuiUrl:'https://${host}/tob/wechat/user/myCoupon' ,
+    youhuiUrl:hostWithHttps+ 'tob/wechat/user/myCoupon' ,
     //检查商品
-    checkDishUrl:'https://${host}/tob/wechat/product/product/getProductInventory' ,
+    checkDishUrl:hostWithHttps+ 'tob/wechat/product/product/getProductInventory' ,
     //查询商品列表
-    searchDishUrl:'https://${host}/tob/wechat/product/product/search' ,
+    searchDishUrl:hostWithHttps+ 'tob/wechat/product/product/search' ,
     //订单取消
-    quxiaoUrl:'https://${host}/tob/wechat/business/order/commentOrder' ,
+    quxiaoUrl:hostWithHttps+ 'tob/wechat/business/order/commentOrder' ,
     //评价
-    commentUrl:'https://${host}/tob/wechat/user/myCoupon' ,
+    commentUrl:hostWithHttps+ 'tob/wechat/user/myCoupon' ,
 //前往确认订单页面
-    initOrderUrl:'https://${host}/tob/wechat/business/order/initOrder' ,
+    initOrderUrl:hostWithHttps+ 'tob/wechat/business/order/initOrder' ,
     //我的订单
-    myOrderUrl:'https://${host}/tob/wechat/business/order/myOrder' ,
+    myOrderUrl: hostWithHttps+ 'tob/wechat/business/order/myOrder' ,
 //订单详情
-    orderDetailUrl:'https://${host}/tob/wechat/business/order/orderDetail' ,
+    orderDetailUrl:hostWithHttps+ 'tob/wechat/business/order/orderDetail' ,
     //微信充值
-    rechargeUrl:'https://${host}/tob/wechat/business/order/recharge' ,
+    rechargeUrl:hostWithHttps+ 'tob/wechat/business/order/recharge' ,
     //订单提交
-    submitUrl:'https://${host}/tob/wechat/business/order/submit' ,
+    submitUrl:hostWithHttps+ 'tob/wechat/business/order/submit' ,
     // 测试的请求地址，用于测试会话
     requestUrl: `https://${host}/testRequest`,
 
     // 用code换取openId
-    openIdUrl: `https://${host}/tob/wechat/user/login`,
+    openIdUrl: hostWithHttps+ 'tob/wechat/user/login',
 
     // 测试的信道服务接口
     tunnelUrl: `https://${host}/tunnel`,

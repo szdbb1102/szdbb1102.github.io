@@ -25,31 +25,24 @@ Page({
         hasLogin:false,
         tobook:{}
     },
-    checkSessionFun:function () {
+    loginFun:function () {
         var self = this;
-        var rd_session;
-        try{
-          rd_session = wx.getStorageSync('rd_session');
-        }catch(e){
-
-        } 
+        var rd_session = wx.getStorageSync('rd_session');
         console.log('rd_session', rd_session)
         if (!rd_session) {
-            self.login();//todo 
+            self.login();
         } else {
             wx.checkSession({
                 success: function () {
                     // 登录态未过期
-                    console.log('登录态未过期')
+                    // console.log('登录态未过期')
                     // self.rd_session = rd_session;
-                    getApp().globalData.rd_session = rd_session;
-                    getApp().globalData.openid = wx.getStorageSync('openid');
-                    // self.getLocation();
+                    // self.getUserInfo();
                     self.login();
                 },
                 fail: function () {
+                    //登录态过期
                     self.login();
-                    console.log('登录态过期')
                 }
             })
         }
@@ -64,45 +57,32 @@ Page({
         var self = this;
         wx.login({
             success: function (res) {
-                console.log('wx.login', res)
                 self.globalData.userInfo = res.rawData;
-                self.getUserInfo(res.code);
-            },
-            fail:function (e) {
-                console.log('拒绝授权')
-                self.errorFun(self);
-            }
-        });
-    },
-    getUserInfo: function(code) {
-        var self = this;
-        wx.getUserInfo({
-            withCredentials:false,
-            success: function(res) {
-                console.log('getUserInfo', res)
-                self.globalData.userInfo = res.userInfo;
-                if(getApp().globalData.rd_session){
-                    self.getLocation();
-                    return;
-                }
-                server.getJSONLogin('https://outfood.51yhr.com/tob/wechat/common/getSessionKey', {code: code}, function (res) {
+                console.log('wx.login', res)
+                server.getJSON('https://outfood.51yhr.com/tob/wechat/common/getSessionKey', {code: res.code}, function (res) {
                     console.log('setUserSessionKey', res)
-                    //存储openid与sessionkey
-                    wx.setStorageSync('openid', res.data.target.openid)
-                    wx.setStorageSync('rd_session', self.rd_session);
                     self.rd_session = res.data.target.session_key;
                     self.globalData.hasLogin = true;
                     self.globalData.openid = res.data.target.openid;
                     app.globalData.openid = res.data.target.openid;
                     wx.setStorageSync('rd_session', self.rd_session);
-                    self.getLocation();
-                    },function (e) {
-                      console.log(e)
-                      self.errorFun(self);
+                    self.getUserInfo();
+                },function () {
+                self.errorFun(self);
                 });
             },
-            fail:function (e) {
+            fail:function () {
                 self.errorFun(self);
+            }
+        });
+    },
+    getUserInfo: function() {
+        var self = this;
+        wx.getUserInfo({
+            success: function(res) {
+                console.log('getUserInfo', res)
+                self.globalData.userInfo = res.userInfo;
+                self.getLocation();
             }
         });
     },
@@ -119,10 +99,10 @@ Page({
               // })
           },
           complete:function (res) {
-            server.postJSONLogin('https://outfood.51yhr.com/tob/wechat/user/login',{
+            server.postJSON('https://outfood.51yhr.com/tob/wechat/user/login',{
                   "latitude": res.latitude.toString(),
                   "longitude":res.longitude.toString(),
-                  "openid": app.globalData.openid,
+                  "openid": self.globalData.openid,
                   "userInfo": self.globalData.userInfo
                 }, function (res) {
                     console.log('checkSignature', res)
@@ -131,9 +111,8 @@ Page({
                         hasLocation:res.data.target.buildingList[0].name
                     })
                     self.globalData.loginData = res.data.target;
-                    app.globalData.loginData = res.data.target;
-                    app.globalData.token = res.data.target.token;
-                    app.globalData.buildingList = res.data.target.buildingList;
+                    getApp().globalData.loginData = res.data.target;
+                    getApp().globalData.token = res.data.target.token;
                     console.log('t',self.globalData.loginData);
                     self.setLoginData(self.globalData.loginData,self);
                     if (res.data.errorcode) {
@@ -296,7 +275,7 @@ Page({
         wx.showLoading({
           title: '加载中',
         })
-        this.checkSessionFun();
+        this.loginFun();
         // this.setData({hasLogin:true})
         // 页面初始化 options为页面跳转所带来的参数
     },
