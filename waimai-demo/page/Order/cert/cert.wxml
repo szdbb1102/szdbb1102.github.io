@@ -3,7 +3,7 @@
         <view class="weui-cells weui-cells_after-title">
             <navigator url="../../person/adress/adress" class="weui-cell weui-cell_access"
                        hover-class="weui-cell_active">
-                <view class="weui-cell__bd">{{morenShouHuo?morenShouHuo.floor+morenShouHuo.room:'选择送货地址'}}</view>
+                <view class="weui-cell__bd">{{morenShouHuo?morenShouHuo.floor+'楼'+morenShouHuo.room:'选择送货地址'}}</view>
                 <view class="weui-cell__ft weui-cell__ft_in-access"></view>
             </navigator>
         </view>
