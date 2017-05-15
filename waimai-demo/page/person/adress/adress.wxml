@@ -5,7 +5,7 @@
 	        <view class="weui-cells weui-cells_after-title">
 	            <radio-group bindchange="radioChange">
 	                <label class="weui-cell weui-check__label" wx:for="{{shouhuoItems}}" wx:key="value">
-	                    <radio bindtap='radioChange' class="weui-check" value="{{item.value}}" checked="{{item.checked}}"/>
+	                    <radio bindtap='radioChange' class="weui-check" value="{{item.id}}" checked="{{item.checked}}"/>
 	                    <view class="flex-box flex4">
 	                    	<view class="w-100b">{{item.contacts}} {{item.contactNumber}}</view>
 	                    	<view class="weui-cell__bd small-gray-font">{{item.adress}}</view>

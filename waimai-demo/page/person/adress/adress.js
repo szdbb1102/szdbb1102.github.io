@@ -21,7 +21,7 @@ Page({
     checkboxChange: function (e) {
         console.log('checkbox发生change事件，携带value值为：', e.detail.value);
 
-        var checkboxItems = this.data.checkboxItems, values = e.detail.value;
+        var checkboxItems = this.data.zhandianItems, values = e.detail.value;
         for (var i = 0, lenI = checkboxItems.length; i < lenI; ++i) {
             checkboxItems[i].checked = false;
 
@@ -37,9 +37,10 @@ Page({
         });
     },
     toBook:function () {
-	    wx.navigateTo({
-	            url: '../../Order/cert/cert'
-	        })
+	    // wx.navigateTo({
+	    //         url: '../../Order/cert/cert'
+	    //     })
+        wx.navigateBack();
   	},
   	addNewAdress:function () {//todo ------0
         var self = this;
@@ -144,18 +145,19 @@ Page({
     radioChange: function (e) {
         console.log('radio发生change事件，携带value值为：', e.detail.value);
 
-        var radioItems = this.data.zhandianItems;
+        var radioItems = this.data.shouhuoItems;
         for (var i = 0, len = radioItems.length; i < len; ++i) {
             if(radioItems[i].id == e.detail.value){
-                getApp().globalData.morenZhanDianId = e.detail.value;
+                getApp().globalData.morenShouHuo = radioItems[i];
             }
             radioItems[i].checked = radioItems[i].id == e.detail.value;
 
         }
 
         this.setData({
-            zhandianItems: radioItems
+            shouhuoItems: radioItems
         });
+        this.toBook();
 
     },
     onLoad:function(options){
@@ -164,7 +166,9 @@ Page({
         var zhandianArr = [];//新增编辑中的picker只能以一维数组存在
         console.log('xx',getApp().globalData.loginData);
         var  loginData = getApp().globalData.loginData;
-
+        if(loginData.deliveryAddresses&&loginData.deliveryAddresses.length>0){
+            loginData.deliveryAddresses[0].checked = true
+        }
         loginData.buildingList[0].checked = true;
         if(loginData.buildingList.length>0){
             loginData.buildingList[0].checked = true;

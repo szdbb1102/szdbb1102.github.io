@@ -1,5 +1,5 @@
 const hostURL = require('../../../config').host;
-const paymentUrl = require('../../../config').paymentUrl
+const config = require('../../../config');
 var server = require('../../../util/server');
 var app = getApp()
 Page({
@@ -78,13 +78,14 @@ Page({
   },
   initOrder:function () {//初始化订单
     var self = this;
-    this.setData({morenShouHuo:app.globalData.loginData.deliveryAddresses[0]})
+    var globalData = app.globalData;
+    this.setData({morenShouHuo:globalData.morenShouHuo?globalData.morenShouHuo:globalData.loginData.deliveryAddresses[0]})
     var url = hostURL + '/tob/wechat/business/order/initOrder';
     var data = {
       buildingId :app.globalData.morenZhanDianId?app.globalData.morenZhanDianId:1
     }
 
-    server.postJSONLogin(url,data,function (res) {
+    server.postJSONLogin(config.initOrderUrl,data,function (res) {
         var data = res.data.target;
         var youhui = [];
         if(data.selfTake){
@@ -111,7 +112,12 @@ Page({
         if(data.salesCouponDetails.length>0){
           youhui.push('使用优惠券')
         }
-        self.setData({initOrder:data,youhui:youhui})
+        self.setData({
+          initOrder:data,youhui:youhui,
+          receiveTime:{start:data.foodTimeStart,
+                        end:data.foodTimeEnd
+                      }
+        })
     })
 
   },
@@ -119,16 +125,16 @@ Page({
 
   },
   onLoad:function(options){
-    console.log(options);
+    // console.log(options);
     this.setData({
       tobook:JSON.parse(options.tobook)
     })
-    this.initOrder();
   },
   onReady:function(){
     // 页面渲染完成
   },
   onShow:function(){
+    this.initOrder();
     // 页面显示
   },
   onHide:function(){

@@ -27,11 +27,15 @@
                     <image src="{{icon}}"
                            style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
                 </view>
-                <view class="weui-cell__bd">统一派送</view>
+                <picker  mode="time" value="{{time}}" start="{{receiveTime.start}}" end="{{receiveTime.end}}" bindchange="bindTimeChange">
+                    <view class="weui-cell__bd">
+                      当前选择: {{time}}
+                    </view>
+                </picker>
                 <view class="weui-cell__ft">大约11：30送达</view>
             </view>
         </view>
-        <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cells weui-cells_after-title" wx:if='{{youhui.length>0}}'>
             <view class="weui-cell weui-cell_select">
                 <view class="weui-cell__hd weui-cell__hd_in-select-after">
                     <view class="weui-label">选择优惠方式</view>
@@ -67,7 +71,7 @@
 <view class="tp-fix">
     <view class="weui-form-preview__ft ">
         <view class="weui-form-preview__btn weui-form-preview__btn_default" hover-class="weui-form-preview__btn_active">
-            待支付{{20}}¥
+            待支付{{tobook.total.money}}¥
         </view>
         <view class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active"
               bindtap="toOrder">提交订单
