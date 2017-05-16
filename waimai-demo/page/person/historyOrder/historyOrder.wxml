@@ -1,7 +1,7 @@
-	<view class="weui-panel__bd bd-bottom bg-fff"  wx:for="{{shouhuoItems}}">
+	<view class="weui-panel__bd bd-bottom bg-fff"  wx:for="{{shouhuoItems}}" bindtap='todetail'>
 		<view class="weui-cell flex-box bg-ddd" >
         </view>
-        <navigator url="" class="weui-media-box weui-media-box_appmsg flex-box" hover-class="weui-cell_active">
+        <view  class="weui-media-box weui-media-box_appmsg flex-box" hover-class="weui-cell_active">
             <view class="weui-media-box__hd weui-media-box__hd_in-appmsg">
                 <image class="weui-media-box__thumb" src="{{icon60}}" />
             </view>
@@ -10,7 +10,7 @@
                 <view class="weui-media-box__desc">{{item.createTime}}</view>
             </view>
             <view class='flex1 small-66-font txt-right'>{{item.orderStat}}</view>
-        </navigator>
+        </view>
         <view class="weui-cell flex-box">
         	<view class='flex2 small-66-font txt-center'>菜品一</view>
         	<view class='flex2 small-66-font txt-center'>x2</view>

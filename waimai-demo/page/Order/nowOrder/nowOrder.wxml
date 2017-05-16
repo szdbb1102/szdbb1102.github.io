@@ -1,37 +1,72 @@
-	<view class="add">配送中</view>
-	<view class='zahndian-wrap'>
-		<view class="title">
-			饭小弟/时代商旅大厦
-		</view>
-		<view class="body" bindtap="toBook">
-			<view class="tp">饭小弟/时代商旅大厦</view>
-			<view class="bt">饭小弟/时代商旅大厦</view>
-		</view>
-	</view>
-	<view class='zahndian-wrap'>
-		<view class="title">
-			配送信息
-		</view>
-		<view class="body" bindtap="toBook">
-			<view class="tp">配送信息</view>
-			<view class="bt">配送信息</view>
-		</view>
-	</view>
-	<view class='zahndian-wrap'>
-		<view class="title">
-			订单信息
-		</view>
-		<view class="body" bindtap="toBook">
-			<view class="tp">订单信息</view>
-			<view class="bt">订单信息</view>
-		</view>
-	</view>
+<view class='wrap-dt' bindtap='hideComment'>
+	<view class="weui-cells__title">{{orderInfo.statusShowName}}</view>
+    <view class="weui-cells__title">时代广场</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell" wx:for="{{tobook.detail}}">
+            <view class="weui-cell__bd">{{item.name}}</view>
+            <view class="weui-cell__ft">¥{{item.price}}x{{item.count}}</view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">配送费</view>
+            <view class="weui-cell__ft">{{postFee}}</view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__bd">实际支付</view>
+            <view class="weui-cell__ft">{{orderInfo.totalActualPrice}}¥</view>
+        </view>
+    </view>
+
+    <view class="weui-cells__title">配送信息</view>
+    <view class="weui-cells weui-cells_after-title">
+        
+        <label class="weui-cell weui-check__label" >
+            <view class="flex-box flex4">
+                <view class="w-100b">{{shouhuo.contacts}} {{shouhuo.contactNumber}}</view>
+                <view class="weui-cell__bd small-gray-font">{{shouhuo.floor+'楼'+shouhuo.room}}</view>
+            </view>
+            <view class="weui-cell__ft weui-cell__ft_in-radio" wx:if="{{item.checked}}">
+                <icon class="weui-icon-radio" type="success_no_circle" size="16"></icon>
+            </view>
+        </label>
+    
+    </view>
+    <view class="weui-cells__title">订单信息</view>
+    <view class="weui-cells weui-cells_after-title">
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                订单号码
+            </view>
+            <view class="weui-cell__bd">
+              
+            </view>
+            <view class="weui-cell__ft">{{orderInfo.code}}</view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                下单时间
+            </view>
+            <view class="weui-cell__bd">
+              
+            </view>
+            <view class="weui-cell__ft">{{orderTime}}</view>
+        </view>
+        <view class="weui-cell">
+            <view class="weui-cell__hd">
+                支付方式
+            </view>
+            <view class="weui-cell__bd">
+              
+            </view>
+            <view class="weui-cell__ft">微信在线支付</view>
+        </view>
+    </view>
+    </view>
 	<view class="btm-btn flex-ver">
 		<view class="lef-btn">联系配送员</view>
 		<view class="rig-btn" bindtap='toComment'>确认取餐</view>
 	</view>
 
-	<view wx:if="commentStat==1">
+	<view wx:if="{{commentStat==1}}">
 		<view class="comment1-description" style="display:flex;flex-direction:row;">
 			<view class="comment1-description1">描述相符</view>
 			<view  class="star-pos" style="display:flex;flex-direction:row;">
@@ -52,3 +87,4 @@
 			</view>
 		</view>
 	</view>
+

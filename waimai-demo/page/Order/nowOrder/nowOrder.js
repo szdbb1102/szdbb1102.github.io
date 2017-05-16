@@ -1,89 +1,11 @@
-const config = require('../../config');
-var server = require('../../util/server');
+const config = require('../../../config');
+var server = require('../../../util/server');
 var app = getApp()
 Page({
   data:{
     flag2:5,
-    orderInfo: {
-        "actualProductNum": 0,
-        "createTime": "2017-05-16T02:49:08.590Z",
-        "createdBy": "string",
-        "id": 0,
-        "merchantId": 0,
-        "order": {
-          "code": "string",
-          "createTime": "2017-05-16T02:49:08.590Z",
-          "createTimeShow": "string",
-          "createTimeStr": "string",
-          "createdBy": "string",
-          "deliveryAddressId": 0,
-          "id": 0,
-          "merchant": {
-            "createTime": "2017-05-16T02:49:08.590Z",
-            "createdBy": "string",
-            "id": 0,
-            "name": "string",
-            "openid": "string",
-            "status": "string",
-            "token": "string",
-            "updateTime": "2017-05-16T02:49:08.590Z",
-            "updatedBy": "string",
-            "userInfo": "string"
-          },
-          "merchantId": 0,
-          "merchantName": "string",
-          "orderRemark": "string",
-          "payStatusName": "string",
-          "paymentAmount": 0,
-          "paymentStatus": 0,
-          "paymentType": 0,
-          "paymentTypeShow": "string",
-          "phonenum": "string",
-          "price": 0,
-          "productNum": 0,
-          "receiver": "string",
-          "receiverTime": "2017-05-16T02:49:08.590Z",
-          "receiverTimeShow": "string",
-          "status": 0,
-          "statusShowName": "string",
-          "updateTime": "2017-05-16T02:49:08.590Z",
-          "updatedBy": "string",
-          "wechatPayInfo": "string"
-        },
-        "orderId": 0,
-        "price": 0,
-        "product": {
-          "categoryId": "string",
-          "categoryIdStr": "string",
-          "cost": 0,
-          "createTime": "2017-05-16T02:49:08.591Z",
-          "createdBy": "string",
-          "descs": "string",
-          "head": "string",
-          "icon": "string",
-          "id": 0,
-          "inventory": 0,
-          "name": "string",
-          "price": 0,
-          "provider": "string",
-          "providerId": "string",
-          "status": 0,
-          "statusForShown": "string",
-          "theaterId": 0,
-          "unit": "string",
-          "updateTime": "2017-05-16T02:49:08.591Z",
-          "updatedBy": "string"
-        },
-        "productId": 0,
-        "productNum": 0,
-        "remark": "string",
-        "returnPrice": 0,
-        "returnProductNum": 0,
-        "returnReason": "string",
-        "updateTime": "2017-05-16T02:49:08.591Z",
-        "updatedBy": "string"
-
-    }
+    orderStat:'配送中',
+    orderInfo: {}
   },
   changeColor11:function(){
     var that = this;
@@ -116,16 +38,45 @@ Page({
     });
   },
   toComment:function () {
-    wx.navigateTo({
-            url: '../comment/comment'
-        })
+    this.setData({commentStat:1});
+  },
+  hideComment:function (argument) {
+    this.setData({commentStat:2});
   },
   onLoad:function(options){
     // todo 查询订单详情
-    // server.postJSONLogin(config.orderDetailUrl,{orderId:options.id},function (res) {
-    //   console.log('订单详情',res)
-    // })
+    var self = this;
+    server.getJSONLogin(config.orderDetailUrl,{orderId:18},function (res) {
+      var nowDt = res.data.target;
+      self.setData({orderInfo:nowDt,
+          orderTime:config.calcuTime(nowDt.createTime),
+          shouhuo:nowDt.deliveryAddress
+      })
+      console.log('订单详情',res)
+
+    })
+    // this.comment()
     // 页面初始化 options为页面跳转所带来的参数
+  },
+  comment:function () {
+    var dt = {
+      "comment": {
+        "descs": "string",
+        "id": 0,
+        "merchantId": 0,
+        "orderId": 6,
+        "start": 0
+      },
+      "tags": [
+        {
+          "id": 0,
+          "name": "态度不错"
+        }
+      ]
+    }
+    server.postJSONLogin(config.commentUrl,dt,function (argument) {
+      // body...
+    })
   },
   onReady:function(){
     // 页面渲染完成

@@ -16,6 +16,10 @@ var config = {
 
     // 下面的地址配合云端 Server 工作
     host,
+    calcuTime:function (tm) {
+        var dt = new Date(tm);
+        return dt.toLocaleString()
+    },
     nowDate:dt.getFullYear()+"-"+(mon)+'-'+ day+' ',
     // 登录地址，用于建立会话
     loginUrl: hostWithHttps+ 'tob/wechat/user/login',
@@ -32,7 +36,7 @@ var config = {
     //订单取消
     quxiaoUrl:hostWithHttps+ 'tob/wechat/business/order/commentOrder' ,
     //评价
-    commentUrl:hostWithHttps+ 'tob/wechat/user/myCoupon' ,
+    commentUrl:hostWithHttps+ 'tob/wechat/business/order/commentOrder' ,
 //前往确认订单页面
     initOrderUrl:hostWithHttps+ 'tob/wechat/business/order/initOrder' ,
     //我的订单

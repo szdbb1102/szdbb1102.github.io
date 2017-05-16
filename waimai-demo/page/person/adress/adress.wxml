@@ -92,7 +92,7 @@
             </view>
 
             <view class="weui-btn-area">
-            	<button bindtap="submitAdd"  formType="submit" class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+            	<button   formType="submit" class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
         	</view>
         </view>
         </form>

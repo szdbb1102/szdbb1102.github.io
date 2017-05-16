@@ -12,8 +12,12 @@ Page({
         zhandianItems: [
             {name: '商旅大厦', value: '0',distance:'1km',checked: true},
             {name: '时代广场', value: '1',distance:'1.5km'}
-        ]
+        ],
     },
+  todetail:function () {
+    
+    wx.navigateTo({url:'../../Order/nowOrder/nowOrder'})
+  },
   onLoad:function(options){
     console.log(orderData);
     server.postJSONLogin(config.myOrderUrl,{
