@@ -30,3 +30,15 @@
 		<view class="lef-btn">联系配送员</view>
 		<view class="rig-btn" bindtap='toComment'>确认取餐</view>
 	</view>
+
+
+	<view class="comment1-description" style="display:flex;flex-direction:row;">
+		<view class="comment1-description1">描述相符</view>
+		<view  class="star-pos" style="display:flex;flex-direction:row;">
+			<view class="starsM  {{flag2>=1? '': 'hideStar'}}"  bindtap="changeColor11"></view>
+			<view class="starsM  {{flag2>=2? '': 'hideStar'}}"  bindtap="changeColor12"></view>
+			<view class="starsM  {{flag2>=3? '': 'hideStar'}}"  bindtap="changeColor13"></view>
+			<view class="starsM  {{flag2>=4? '': 'hideStar'}}"  bindtap="changeColor14"></view>
+			<view class="starsM  {{flag2>=5? '': 'hideStar'}}"  bindtap="changeColor15"></view>
+		</view>
+	</view>
