@@ -84,7 +84,7 @@
             待支付{{tobook.total.money}}¥
         </view>
         <button class="weui-form-preview__btn weui-form-preview__btn_primary" hover-class="weui-form-preview__btn_active"
-                formType="submit"    bindtap="toOrder">提交订单
+                formType="submit"    bindtap="">提交订单
         </button>
     </view>
 </view>

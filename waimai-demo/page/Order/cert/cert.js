@@ -53,7 +53,7 @@ Page({
         })
         // this.data.toView = 'red'
     },
-    requestPayment: function (data) {
+    requestPayment: function (data,id) {//支付
         var self = this;
         var payargs = JSON.parse(data);
         wx.requestPayment({
@@ -62,6 +62,12 @@ Page({
             package: payargs.packageStr,
             signType: payargs.signType,
             paySign: payargs.paySign,
+            success:function () {
+                wx.navigateTo({url:'../nowOrder/nowOrder?id='+id})
+            },
+            fail:function () {
+
+            },
             complete: function (res) {
                 console.log('支付完成')
             }
@@ -114,7 +120,7 @@ Page({
         var data = {
             'openid': app.globalData.openid,
             'currUrl': 'page/Order/cert/cert',
-            "activityFlag": dt.activityFlag,
+            "activityFlag": dt.activityFlag?dt.activityFlag:2,
             "commonDoorFlag": dt.commonDoorFlag,
             "orderRemark": dt.orderRemark,
             "buildingId": app.globalData.morenZhanDianId ? app.globalData.morenZhanDianId : 1,
@@ -125,7 +131,7 @@ Page({
         }
         server.postJSONLogin(config.submitUrl, data, function (res) {
             var payData = res.data.target.wechatPayInfo;
-            self.requestPayment(payData)
+            self.requestPayment(payData,res.data.target.id)
         })
     },
     initOrder: function () {//初始化订单
@@ -156,8 +162,8 @@ Page({
                 }
                 self.setData({radioItems: radioItems})
             }
-            data.hasFirstOrder = true;
-            data.firstOrderJian = 20;
+            // data.hasFirstOrder = true;
+            // data.firstOrderJian = 20;
             if (data.hasFirstOrder) {
                 youhui.push({name:'首单优惠',jian:data.firstOrderJian,type:'0'})
             }

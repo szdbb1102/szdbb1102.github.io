@@ -3,11 +3,20 @@
 var host = "outfood.51yhr.com"
 var hostWithHttps = 'https://outfood.51yhr.com/'
 var dt = new Date();
+var day = dt.getDate()+1;
+var mon = dt.getMonth();
+if(day<10){
+    day='0'+day.toString();
+}
+if(mon<10){
+    mon = '0'+mon.toString();
+}
+
 var config = {
 
     // 下面的地址配合云端 Server 工作
     host,
-    nowDate:dt.getFullYear()+"-"+(dt.getMonth()+1)+'-'+ dt.getDate()+' ',
+    nowDate:dt.getFullYear()+"-"+(mon)+'-'+ day+' ',
     // 登录地址，用于建立会话
     loginUrl: hostWithHttps+ 'tob/wechat/user/login',
     //地址添加编辑
