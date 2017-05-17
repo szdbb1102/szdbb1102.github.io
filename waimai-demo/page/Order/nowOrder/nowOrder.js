@@ -46,7 +46,7 @@ Page({
   onLoad:function(options){
     // todo 查询订单详情
     var self = this;
-    server.getJSONLogin(config.orderDetailUrl,{orderId:18},function (res) {
+    server.getJSONLogin(config.orderDetailUrl,{orderId:options.id},function (res) {
       var nowDt = res.data.target;
       self.setData({orderInfo:nowDt,
           orderTime:config.calcuTime(nowDt.createTime),

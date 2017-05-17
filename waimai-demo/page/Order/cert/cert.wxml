@@ -37,19 +37,19 @@
                 </radio-group>
             </view>
         </view>
-        <view class="weui-cells__title">配送时间</view>
+        <view class="weui-cells__title">选择配送时间</view>
         <view class="weui-cells weui-cells_after-title">
             <view class="weui-cell">
                 <view class="weui-cell__hd">
                     <image src="{{icon}}"
                            style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
                 </view>
-                <picker  mode="time" value="{{time}}" name="receiverTime" start="{{receiveTime.start}}" end="{{receiveTime.end}}" bindchange="bindTimeChange">
+                <picker  mode="time" value="11:30" name="receiverTime" start="{{receiveTime.start}}" end="{{receiveTime.end}}" bindchange="bindTimeChange">
                     <view class="weui-cell__bd">
-                      当前选择: {{time}}
+                      {{chooseTime?'当前选择'+chooseTime:'请选择时间'}}
                     </view>
+                
                 </picker>
-                <view class="weui-cell__ft">大约11：30送达</view>
             </view>
         </view>
         <view class="weui-cells__title">备注</view>

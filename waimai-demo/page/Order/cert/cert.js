@@ -9,8 +9,14 @@ Page({
             {name: '下楼自取（配送费2.5元）', value: '0', fee: 2.5},
             {name: '送餐上门（配送费5元）', value: '1', fee: 5, checked: true}
         ],
-        youhui: []
-
+        youhui: [],
+        // chooseTime:'11:30'
+    },
+    bindTimeChange:function (e) {
+        console.log(e.detail.value)
+        this.setData({
+            chooseTime:e.detail.value
+        })
     },
     radioChange: function (e) {
         console.log('radio发生change事件，携带value值为：', e.detail.value);
@@ -63,13 +69,13 @@ Page({
             signType: payargs.signType,
             paySign: payargs.paySign,
             success:function () {
-                wx.navigateTo({url:'../nowOrder/nowOrder?id='+id})
+                
             },
             fail:function () {
 
             },
             complete: function (res) {
-                console.log('支付完成')
+                wx.navigateTo({url:'../nowOrder/nowOrder?id='+id})
             }
         })
     },
@@ -129,13 +135,20 @@ Page({
             "products": pro,
             "receiverTime": config.nowDate+dt.receiverTime,
         }
+        wx.showLoading({
+          title: '订单创建中',
+        })
         server.postJSONLogin(config.submitUrl, data, function (res) {
+            wx.hideLoading();
             var payData = res.data.target.wechatPayInfo;
             self.requestPayment(payData,res.data.target.id)
         })
     },
     initOrder: function () {//初始化订单
         var self = this;
+        wx.showLoading({
+          title: '正在获取优惠信息',
+        })
         var globalData = app.globalData;
         this.setData({morenShouHuo: globalData.morenShouHuo ? globalData.morenShouHuo : globalData.loginData.deliveryAddresses[0]})
         var url = hostURL + '/tob/wechat/business/order/initOrder';
@@ -146,6 +159,7 @@ Page({
         app.globalData.morenShouHuo = this.data.morenShouHuo;
 
         server.postJSONLogin(config.initOrderUrl, data, function (res) {
+            wx.hideLoading();
             var data = res.data.target;
             var youhui = [];
             if (data.selfTake) {
