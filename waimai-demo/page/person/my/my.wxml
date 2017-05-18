@@ -1,14 +1,14 @@
 
 <view class='flex-box person-info'>
-	<image class="image touxiang" src="../../component/resources/pic/dish-9.jpg" />
+	<image class="image touxiang" src="{{avatarUrl}}" />
 	<view class="weui-cell__bd">{{name}}</view>
 </view>
-<view class="weui-panel__ft">
+<!-- <view class="weui-panel__ft">
     <navigator  url="../money/money" class="weui-cell weui-cell_access weui-cell_link">
         <view class="weui-cell__bd">我的余额</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </navigator>
-</view>
+</view> -->
 <view class="weui-panel__ft">
     <view class="weui-cell weui-cell_access weui-cell_link">
         <view class="weui-cell__bd">客服电话:13915412747</view>
@@ -20,30 +20,4 @@
         <view class="weui-cell__bd">工作时间10：00—14：00</view>
         <view class="weui-cell__ft weui-cell__ft_in-access"></view>
     </view>
-</view>
-
-<view class="section">
-  <view class="section__title">地区选择器</view>
-  <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
-    <view class="picker">
-      当前选择：{{array[index]}}
-    </view>
-  </picker>
-</view>
-<view class="section">
-  <view class="section__title">时间选择器</view>
-  <picker mode="time" value="{{time}}" start="09:01" end="21:01" bindchange="bindTimeChange">
-    <view class="picker">
-      当前选择: {{time}}
-    </view>
-  </picker>
-</view>
-
-<view class="section">
-  <view class="section__title">日期选择器</view>
-  <picker mode="date" value="{{date}}" start="2015-09-01" end="2017-09-01" bindchange="bindDateChange">
-    <view class="picker">
-      当前选择: {{date}}
-    </view>
-  </picker>
 </view>

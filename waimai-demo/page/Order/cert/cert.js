@@ -141,6 +141,10 @@ Page({
         server.postJSONLogin(config.submitUrl, data, function (res) {
             wx.hideLoading();
             var payData = res.data.target.wechatPayInfo;
+            app.globalData.zhifuOrder={
+                payData:payData,
+                orderID:res.data.target.id
+            }
             self.requestPayment(payData,res.data.target.id)
         })
     },

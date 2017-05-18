@@ -1,30 +1,10 @@
 // page/person/my/my.js
-
+const config = require('../../../config');
+var server = require('../../../util/server');
+var app = getApp()
 Page({
   data: {
-    name:'尼古拉斯.薛少',
-    array: ['美国', '中国', '巴西', '日本'],
-    objectArray: [
-      {
-        id: 0,
-        name: '美国'
-      },
-      {
-        id: 1,
-        name: '中国'
-      },
-      {
-        id: 2,
-        name: '巴西'
-      },
-      {
-        id: 3,
-        name: '日本'
-      }
-    ],
-    index: 0,
-    date: '2016-09-01',
-    time: '12:01'
+    name:''
   },
   bindPickerChange: function(e) {
     console.log('picker发送选择改变，携带值为', e.detail.value)
@@ -41,5 +21,12 @@ Page({
     this.setData({
       time: e.detail.value
     })
-  }
+  },
+  onLoad:function(options){
+        var dt = app.globalData.userInfoDt;
+        this.setData({
+          name:dt.nickName,
+          avatarUrl:dt.avatarUrl
+        })
+    },
 })

@@ -79,7 +79,7 @@
 }
 .comment1-description .star-pos .hideStar{
 	z-index: 2;
-	background-image: url("../../../image/starGray@1.5x.png");
+	background-image: url("http://m.dev.vd.cn/static/xcx/v1/goo/starGray@1.5x.png");
 	width: 83rpx;
 	height: 43rpx;
 	background-size: 43rpx 43rpx;
@@ -91,7 +91,7 @@
 	z-index: 1;
 	width: 83rpx;
 	height: 43rpx;
-	background-image: url("../../../image/star@1.5x.png");
+	background-image: url('http://m.dev.vd.cn/static/xcx/v1/goo/star@1.5x.png');
 	background-size: 43rpx 43rpx;
 	background-position: center center;
 	background-repeat: no-repeat;

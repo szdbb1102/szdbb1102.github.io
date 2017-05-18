@@ -40,12 +40,46 @@ Page({
   toComment:function () {
     this.setData({commentStat:1});
   },
+  getComment:function (e) {
+    var dt = e.detail.value;
+    this.setData({
+      commentConT:dt
+    })
+  },
   hideComment:function (argument) {
+    wx.showToast({
+      title: '已反馈',
+      icon: 'success',
+      duration: 2000
+    })  
+    var dt2 = {
+      "comment": {
+        "descs": this.data.commentConT?this.data.commentConT:'',
+        "id": 0,
+        "merchantId": 0,
+        "orderId": this.data.orderId,
+        "start": this.data.flag2
+      },
+      "tags": [
+        
+      ]
+    }
+    server.postJSONLogin(config.commentUrl,dt2,function () {
+      // body...
+    })
     this.setData({commentStat:2});
   },
   onLoad:function(options){
     // todo 查询订单详情
     var self = this;
+    if(app.globalData.zhifuOrder&&app.globalData.zhifuOrder!={}){
+      this.setData({
+        zhifuOrder:app.globalData.zhifuOrder
+      })
+    }
+    this.setData({
+      orderId:options.id
+    })
     server.getJSONLogin(config.orderDetailUrl,{orderId:options.id},function (res) {
       var nowDt = res.data.target;
       self.setData({orderInfo:nowDt,
@@ -57,6 +91,26 @@ Page({
     })
     // this.comment()
     // 页面初始化 options为页面跳转所带来的参数
+  },
+  toZhiFU:function () {
+    var payargs = JSON.parse(this.data.zhifuOrder.payData);
+    var id = this.data.zhifuOrder.orderID;
+        wx.requestPayment({
+            timeStamp: payargs.timeStamp,
+            nonceStr: payargs.nonceStr,
+            package: payargs.packageStr,
+            signType: payargs.signType,
+            paySign: payargs.paySign,
+            success:function () {
+                
+            },
+            fail:function () {
+
+            },
+            complete: function (res) {
+                wx.redirectTo({url:'../nowOrder/nowOrder?id='+id})
+            }
+        })
   },
   comment:function () {
     var dt = {

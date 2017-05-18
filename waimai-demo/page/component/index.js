@@ -80,6 +80,7 @@ Page({
             withCredentials:false,
             success: function(res) {
                 console.log('getUserInfo', res)
+                app.globalData.userInfoDt = JSON.parse(res.rawData);
                 self.globalData.userInfo = res.userInfo;
                 if(getApp().globalData.rd_session){
                     self.getLocation();
@@ -294,7 +295,7 @@ Page({
     },
     onLoad:function(options){
         wx.showLoading({
-          title: '加载中',
+        title: '加载中',
         })
         this.checkSessionFun();
         // this.setData({hasLogin:true})

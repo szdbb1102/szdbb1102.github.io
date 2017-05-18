@@ -61,10 +61,13 @@
         </view>
     </view>
     </view>
-	<view class="btm-btn flex-ver">
+	<view class="btm-btn flex-ver" wx:if='{{orderInfo.statusShowName=="订单确认"}}'>
 		<view class="lef-btn">联系配送员</view>
 		<view class="rig-btn" bindtap='toComment'>确认取餐</view>
 	</view>
+    <view class="weui-btn-area" wx:if='{{orderInfo.statusShowName=="等待付款"&&zhifuOrder.orderID==orderId}}'>
+                <button bindtap="toZhiFU" class="weui-btn" type="primary" >去支付</button>
+            </view>
 <view class="zhezhao" wx:if="{{commentStat==1}}">
 	<view class='commentArea' >
 		<view class="comment1-description" style="display:flex;flex-direction:row;">
@@ -82,12 +85,12 @@
 		<view class="weui-cells weui-cells_after-title">
 			<view class="weui-cell weui-cell_input">
 				<view class="weui-cell__bd">
-					<input class="weui-input" name="orderRemark" placeholder="其他想说的（匿名告诉送饭小哥）"/>
+					<input class="weui-input" name="orderRemark" placeholder="其他想说的（匿名告诉送饭小哥）" bindchange='getComment'/>
 				</view>
 			</view>
 		</view>
         <view class="weui-btn-area">
-                <button bindtap="submitEdit" class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
+                <button bindtap="hideComment" class="weui-btn" type="primary" >确定</button>
             </view>
 	</view>
 </view>
