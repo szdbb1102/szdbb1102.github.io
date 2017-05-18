@@ -65,8 +65,8 @@
 		<view class="lef-btn">联系配送员</view>
 		<view class="rig-btn" bindtap='toComment'>确认取餐</view>
 	</view>
-
-	<view class='commentArea' wx:if="{{commentStat==1}}">
+<view class="zhezhao" wx:if="{{commentStat==1}}">
+	<view class='commentArea' >
 		<view class="comment1-description" style="display:flex;flex-direction:row;">
 			<view class="comment1-description1">描述相符</view>
 			<view  class="star-pos" style="display:flex;flex-direction:row;">
@@ -90,4 +90,4 @@
                 <button bindtap="submitEdit" class="weui-btn" type="primary" bindtap="showTopTips">确定</button>
             </view>
 	</view>
-
+</view>
