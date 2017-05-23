@@ -1,13 +1,12 @@
 // import dishes from './resources/json/dish.js'
 const openIdUrl = require('../../config').loginUrl;
 const server = require('../../util/server');
+const config = require('../../config');
 const app = getApp();
 Page({
     data:{
         adds: [
-          {name:'',color:'#31CA63'},
-          {name:'',color:'#31CA63'},
-          {name:'',color:'#31CA63'}
+          {name:'饭小弟，你好！',color:'#31CA63'}
         ],
         indicatorDots: true,
         vertical: false,
@@ -127,7 +126,7 @@ Page({
                   "userInfo": self.globalData.userInfo
                 }, function (res) {
                     console.log('checkSignature', res)
-                    wx.hideLoading();
+                    config.hideLoading(self);
                     self.setData({
                         hasLocation:res.data.target.buildingList[0].name
                     })
@@ -268,7 +267,7 @@ Page({
         this.loginFun();
     },
     errorFun:function (scope) {
-        wx.hideLoading();
+        config.hideLoading(scope);
         scope.setData({
             serverError:true
         })
@@ -294,9 +293,7 @@ Page({
         })
     },
     onLoad:function(options){
-        wx.showLoading({
-        title: '加载中',
-        })
+        config.showLoading('获取美食中',this)
         this.checkSessionFun();
         // this.setData({hasLogin:true})
         // 页面初始化 options为页面跳转所带来的参数

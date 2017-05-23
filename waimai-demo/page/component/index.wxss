@@ -1,4 +1,14 @@
-.image{
+
+/*广告*/
+.add-cont{
+  margin-top: 50rpx;
+  text-align: left;
+  text-indent: 15rpx;
+  font-size: 30px;
+  color: #fff;
+}
+.image
+{
   width: 100%;
   height: 100%
 }
@@ -21,8 +31,8 @@
   height: 300rpx;
 }
 .nav-tab-wrp{
-  height: 18px;
-  padding:18px 0;
+  /*height: 18px;*/
+  /*padding:18px 0;*/
   width: 100%;
   display: flex;
   flex-direction:row;
@@ -30,19 +40,28 @@
   z-index: 10
 }
 .nav-tab-item{
-  width: 250rpx;
+  width: 33.33%;
   text-align: center;
+  height: 54px;
+  justify-content: center;
+  align-items: center;
   /*line-height: 88rpx;*/
   color: rgb(102, 102, 102);
 }
 .nav-tab-item span{
   display:inline-block;
-  width:100%;
+  /*width:100%;*/
   font-size:16px;
-  line-height:16px;
+  line-height:49px;
+  height: 49px;
+
+  /*border-bottom: 5px solid #fff ;*/
 
   /*height:14px;*/
   /*line-height:88rpx;*/
+}
+.nav-tab-item span.active{
+  border-bottom: 5px solid #31CA63 ;
 }
 /*底部浮动*/
 .cart-tab-wrp{
@@ -191,7 +210,7 @@
 }
 .dish-item-name{
   color:#454545;
-font-size:52rpx;
+font-size:24px;
 }
 .dish-item-sales{
   color: #ccc;

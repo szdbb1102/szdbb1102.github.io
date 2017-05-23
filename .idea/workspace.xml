@@ -1,7 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b4d423bc-8a5c-47c0-908b-4258e9e1288a" name="Default" comment="" />
+    <list default="true" id="b4d423bc-8a5c-47c0-908b-4258e9e1288a" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/arrowright.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/green_tri.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/icon64_appwx_logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/icon_API.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/icon_API_HL.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/icon_component.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/icon_component_HL.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/mealNormal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/mealSelect.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/myNormal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/mySelect.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/orderListNormal.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/orderListSelect.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/pause.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/play.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/record.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/stop.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/wechat.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/image/wechatHL.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-1.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-10.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-2.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-3.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-4.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-5.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-6.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-7.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-8.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/waimai-demo/page/component/resources/pic/dish-9.jpg" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/app.wxss" afterPath="$PROJECT_DIR$/waimai-demo/app.wxss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/config.js" afterPath="$PROJECT_DIR$/waimai-demo/config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.js" afterPath="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxml" afterPath="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/page/component/index.js" afterPath="$PROJECT_DIR$/waimai-demo/page/component/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/page/component/index.wxml" afterPath="$PROJECT_DIR$/waimai-demo/page/component/index.wxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/page/component/index.wxss" afterPath="$PROJECT_DIR$/waimai-demo/page/component/index.wxss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.js" afterPath="$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.wxml" afterPath="$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.wxml" />
+    </list>
     <ignored path="szdbb1102.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -26,53 +66,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="cert.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="1" column="52" lean-forward="false" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cert.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="162">
-              <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/waimai-demo/util/server.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="891">
-              <caret line="33" column="12" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="adress.wxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/adress/adress.wxml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3321">
-              <caret line="123" column="16" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.wxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.wxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="783">
-              <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="36" />
+            <state relative-caret-position="567">
+              <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
               <folding>
                 <element signature="n#style#0;n#view#0;n#swiper-item#0;n#block#0;n#view#0;n#view#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#view#0;n#view#0;n#view#2;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,50 +82,20 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2376">
-              <caret line="88" column="30" lean-forward="false" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+            <state relative-caret-position="216">
+              <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
               <folding>
-                <marker date="1494341562334" expanded="true" signature="8574:8580" ph="{...}" />
+                <marker date="1495344038167" expanded="true" signature="9467:9473" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/waimai-demo/app.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="147">
-              <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.wxss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/waimai-demo/app.wxss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="36531">
-              <caret line="1353" column="8" lean-forward="false" selection-start-line="1353" selection-start-column="8" selection-end-line="1353" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cert.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1485">
-              <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.wxss" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.wxss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.wxss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2781">
-              <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
+            <state relative-caret-position="167">
+              <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -146,6 +117,16 @@
       <find>cart-tab-item-btn</find>
       <find>imag</find>
       <find>hasLocation</find>
+      <find>showLoadi</find>
+      <find>hideloading</find>
+      <find>showLoading</find>
+      <find>hide</find>
+      <find>showload</find>
+      <find>hideloa</find>
+      <find>nav-tab-item</find>
+      <find>image</find>
+      <find>solid</find>
+      <find>dish-item-name</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -176,22 +157,26 @@
         <option value="$PROJECT_DIR$/waimai-demo/pages/index/index.wxml" />
         <option value="$PROJECT_DIR$/waimai-demo/pages/components/dishes/dishes.js" />
         <option value="$PROJECT_DIR$/waimai-demo/page/component/resources/json/dish.js" />
-        <option value="$PROJECT_DIR$/waimai-demo/page/component/index.js" />
-        <option value="$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.wxml" />
         <option value="$PROJECT_DIR$/waimai-demo/page/person/youhui/youhui.wxml" />
         <option value="$PROJECT_DIR$/waimai-demo/page/person/my/my.wxml" />
         <option value="$PROJECT_DIR$/waimai-demo/app.js" />
         <option value="$PROJECT_DIR$/test.js" />
         <option value="$PROJECT_DIR$/waimai-demo/page/person/adress/adress.js" />
-        <option value="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.js" />
-        <option value="$PROJECT_DIR$/waimai-demo/app.wxss" />
         <option value="$PROJECT_DIR$/waimai-demo/page/component/index2.wxss" />
         <option value="$PROJECT_DIR$/waimai-demo/page/component/index2.js" />
         <option value="$PROJECT_DIR$/waimai-demo/page/component/index2.wxml" />
-        <option value="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxml" />
         <option value="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxss" />
         <option value="$PROJECT_DIR$/waimai-demo/util/server.js" />
         <option value="$PROJECT_DIR$/waimai-demo/app.json" />
+        <option value="$PROJECT_DIR$/waimai-demo/config.js" />
+        <option value="$PROJECT_DIR$/waimai-demo/app.wxss" />
+        <option value="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxml" />
+        <option value="$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.js" />
+        <option value="$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.js" />
+        <option value="$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.wxml" />
+        <option value="$PROJECT_DIR$/waimai-demo/page/component/index.js" />
+        <option value="$PROJECT_DIR$/waimai-demo/page/component/index.wxml" />
+        <option value="$PROJECT_DIR$/waimai-demo/page/component/index.wxss" />
       </list>
     </option>
   </component>
@@ -335,7 +320,33 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="adress" />
+              <option name="myItemId" value="my" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="szdbb1102.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="szdbb1102.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="waimai-demo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="page" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="person" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="historyOrder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -375,7 +386,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="other" />
+              <option name="myItemId" value="Order" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="nowOrder" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -459,53 +474,15 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="todo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szdbb1102.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szdbb1102.github.io" />
+              <option name="myItemId" value="waimai-demo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libDemo" />
+              <option name="myItemId" value="page" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="underscore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szdbb1102.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szdbb1102.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libDemo" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szdbb1102.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="szdbb1102.github.io" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="experience" />
+              <option name="myItemId" value="API" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -639,6 +616,7 @@
       <workItem from="1494241673336" duration="6375000" />
       <workItem from="1494339211380" duration="5741000" />
       <workItem from="1494345156820" duration="296000" />
+      <workItem from="1495336364090" duration="6166000" />
     </task>
     <task id="LOCAL-00002" summary="nothing">
       <created>1494345378863</created>
@@ -651,7 +629,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="70044000" />
+    <option name="totallyTimeSpent" value="76210000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -664,39 +642,39 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23443505" sideWeight="0.49555555" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23981553" sideWeight="0.49555555" order="3" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09154929" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274648" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32922536" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24212144" sideWeight="0.4788961" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32807016" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10914681" sideWeight="0.4788961" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09154929" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8022508" sideWeight="0.5211039" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09154929" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09154929" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32820514" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3274648" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32807016" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.09154929" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0053804764" sideWeight="0.49555555" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23981553" sideWeight="0.49555555" order="3" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24248926" sideWeight="0.4788961" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24212144" sideWeight="0.4788961" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.8022508" sideWeight="0.5211039" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -743,34 +721,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/javascripts/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="8585" column="12" lean-forward="false" selection-start-line="8585" selection-start-column="12" selection-end-line="8585" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/params.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/test.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="2" column="8" lean-forward="false" selection-start-line="2" selection-start-column="8" selection-end-line="2" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5064">
@@ -889,21 +839,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="2" column="7" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/youhui/youhui.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33">
-          <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/my/my.wxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="33">
           <caret line="1" column="6" lean-forward="false" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
@@ -928,7 +864,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2889">
           <caret line="107" column="2" lean-forward="false" selection-start-line="107" selection-start-column="2" selection-end-line="107" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -950,64 +885,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1728">
           <caret line="64" column="10" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="64" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2781">
-          <caret line="103" column="20" lean-forward="false" selection-start-line="103" selection-start-column="20" selection-end-line="103" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1485">
-          <caret line="55" column="33" lean-forward="false" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="1" column="52" lean-forward="false" selection-start-line="1" selection-start-column="52" selection-end-line="1" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/adress/adress.wxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3321">
-          <caret line="123" column="16" lean-forward="false" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="783">
-          <caret line="29" column="36" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="36" />
-          <folding>
-            <element signature="n#style#0;n#view#0;n#swiper-item#0;n#block#0;n#view#0;n#view#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/app.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36531">
-          <caret line="1353" column="8" lean-forward="false" selection-start-line="1353" selection-start-column="8" selection-end-line="1353" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        <state relative-caret-position="3618">
+          <caret line="134" column="16" lean-forward="false" selection-start-line="134" selection-start-column="16" selection-end-line="134" selection-end-column="16" />
           <folding />
         </state>
       </provider>
@@ -1020,20 +904,127 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.js">
+    <entry file="file://$PROJECT_DIR$/waimai-demo/app.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2376">
-          <caret line="88" column="30" lean-forward="false" selection-start-line="88" selection-start-column="30" selection-end-line="88" selection-end-column="30" />
+        <state relative-caret-position="147">
+          <caret line="27" column="16" lean-forward="false" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/app.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="351">
+          <caret line="1385" column="16" lean-forward="false" selection-start-line="1385" selection-start-column="16" selection-end-line="1385" selection-end-column="16" />
           <folding>
-            <marker date="1494341562334" expanded="true" signature="8574:8580" ph="{...}" />
+            <marker date="1495338856445" expanded="true" signature="27666:27809" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/waimai-demo/app.json">
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/nowOrder/nowOrder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+        <state relative-caret-position="-40">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/my/my.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/my/my.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="false" selection-start-line="0" selection-start-column="11" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="152" column="26" lean-forward="false" selection-start-line="152" selection-start-column="26" selection-end-line="152" selection-end-column="26" />
+          <folding>
+            <marker date="1495342426605" expanded="true" signature="8144:8147" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/config.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="26" column="24" lean-forward="false" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="25" column="13" lean-forward="true" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/person/historyOrder/historyOrder.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="31" column="7" lean-forward="false" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/Order/cert/cert.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="282">
+          <caret line="92" column="0" lean-forward="false" selection-start-line="92" selection-start-column="0" selection-end-line="98" selection-end-column="7" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#view#0;n#view#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <folding>
+            <marker date="1495344038167" expanded="true" signature="9467:9473" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="n#style#0;n#view#0;n#swiper-item#0;n#block#0;n#view#0;n#view#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#view#0;n#view#0;n#view#2;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/waimai-demo/page/component/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="58" column="0" lean-forward="true" selection-start-line="58" selection-start-column="0" selection-end-line="58" selection-end-column="0" />
           <folding />
         </state>
       </provider>

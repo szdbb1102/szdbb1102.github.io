@@ -135,11 +135,10 @@ Page({
             "products": pro,
             "receiverTime": config.nowDate+dt.receiverTime,
         }
-        wx.showLoading({
-          title: '订单创建中',
-        })
+        config.showLoading( '订单创建中',self
+        )
         server.postJSONLogin(config.submitUrl, data, function (res) {
-            wx.hideLoading();
+            config.hideLoading(self);
             var payData = res.data.target.wechatPayInfo;
             app.globalData.zhifuOrder={
                 payData:payData,
@@ -150,9 +149,9 @@ Page({
     },
     initOrder: function () {//初始化订单
         var self = this;
-        wx.showLoading({
-          title: '正在获取优惠信息',
-        })
+        config.showLoading(
+           '正在获取优惠信息',self
+        )
         var globalData = app.globalData;
         this.setData({morenShouHuo: globalData.morenShouHuo ? globalData.morenShouHuo : globalData.loginData.deliveryAddresses[0]})
         var url = hostURL + '/tob/wechat/business/order/initOrder';
@@ -163,7 +162,7 @@ Page({
         app.globalData.morenShouHuo = this.data.morenShouHuo;
 
         server.postJSONLogin(config.initOrderUrl, data, function (res) {
-            wx.hideLoading();
+            config.hideLoading(self);
             var data = res.data.target;
             var youhui = [];
             if (data.selfTake) {

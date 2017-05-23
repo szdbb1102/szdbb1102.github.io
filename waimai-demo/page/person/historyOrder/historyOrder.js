@@ -21,13 +21,13 @@ Page({
   onLoad:function(options){
     console.log(orderData);
     var self = this;
-    wx.showLoading({
-          title: '获取订单信息中',
-        })
+    config.showLoading(
+          '获取订单信息中',
+        self)
     server.postJSONLogin(config.myOrderUrl,{
       
     }, function (res) {
-        wx.hideLoading()
+        config.hideLoading(self)
         console.log(orderData);
         var dt = res.data.target;
         if(dt.length>0){

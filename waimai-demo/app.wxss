@@ -1369,3 +1369,20 @@ font-size:14px;
 }
 /*遮罩层*/
 .zhezhao{position:fixed;width:100%;height:100%;top:0px;background:rgba(0,0,0,0.4);overflow: hidden;}
+/*loding*/
+.loading-zhezhao{position:fixed;width:100%;height:100%;top:0px;background:#fff;
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+}
+.loading{
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: -264rpx;
+  justify-content: center;
+}
+.loading image{
+  width: 150rpx;
+  height: 145rpx;
+
+}

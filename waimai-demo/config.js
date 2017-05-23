@@ -16,6 +16,19 @@ var config = {
 
     // 下面的地址配合云端 Server 工作
     host,
+    showLoading:function (txt,scope) {
+      var self = scope;
+      self.setData({
+          loading:true,
+          loadingTxT:txt
+      })
+    },
+    hideLoading:function (scope) {
+        var self = scope;
+        self.setData({
+            loading:false
+        })
+    },
     calcuTime:function (tm) {
         var dt = new Date(tm);
         return dt.toLocaleString()

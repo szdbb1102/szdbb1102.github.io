@@ -22,4 +22,12 @@
         </view>
     </view>
 </scroll-view>
+
+<view class="loading-zhezhao flex-box" wx:if="{{loading}}">
+    <view class="loading flex-box">
+        <image class="" src="../../image/loadTab.gif" />
+        <view style="text-align: center;width: 200rpx;color:#dcdcdc">{{loadingTxT}}</view>
+    </view>
+
+</view>
    
