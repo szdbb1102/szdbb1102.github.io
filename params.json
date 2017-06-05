@@ -1,1 +1,16 @@
-{"name":"Szdbb1102.GitHub.io","tagline":"test","body":"一个伟大的页面，嘻嘻","google":"","note":"Don't delete this file! It's used internally to help with page regeneration."}
+{
+  "error": "",
+  "status": 200,
+  "usedtime": 0,
+  "srvtime": "2017-6-2 16:36:11",
+  "islogin": 0,
+  "iswork": true,
+  "tag": "436451621c934d85b004e32dc9221fc6",
+  "data": {
+    "lowestPrice": "29750",
+    "lowestTime": "626",
+    "config": 1,
+    "frontShow": "4",
+    "path": "https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx3827070276e49e30&redirect_uri=http://wx.17u.cn/flight/getopenid.html?url=http://wx.17u.cn/strain/webapp/train/list.html?startdatetime=2017-06-02%2526startname=广州%2526arrivename=天津&showwxpaytitle=1&response_type=code&scope=snsapi_base&state=123&connect_redirect=1#wechat_redirect"
+  }
+}
