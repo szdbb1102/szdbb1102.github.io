@@ -148,6 +148,7 @@ Page({
         const loginData =  self.globalData.loginData;
         var dishes =   loginData.productList;
         for (var i = 0; i < dishes.length; i++) {
+          dishes[i].head ='https://outfood.51yhr.com'+ dishes[i].head;
             dishes[i].count = 0;
         }
         this.setData({
@@ -212,7 +213,7 @@ Page({
         })
         dishCur.count += 1;
         total.count += 1
-        total.money += dishCur.price
+        total.money = config.accAdd(total.money,dishCur.price);
         var tobook = this.getOrderParam();
         this.setData({
             'dishes':dishAll,
@@ -231,7 +232,7 @@ Page({
             return
         dishCur.count -= 1;
         total.count -= 1
-        total.money -= dishCur.price
+        total.money = config.accAdd(total.money,-dishCur.price);
         var tobook = this.getOrderParam();
         this.setData({
             'dishes':dishAll,

@@ -36,7 +36,7 @@
                         <view class="dish-item">
                             <view class="dish-item-wrp flex-box">
                                 <view class="dish-item-pic bf100">
-                                    <image class="image" src="resources/pic/{{dish.pic}}" />
+                                    <image class="image" src="{{dish.head}}" />
                                 </view>
                                 <view class="dish-item-info flex2 flex-box" style="">
                                     <view class='bf100'>
