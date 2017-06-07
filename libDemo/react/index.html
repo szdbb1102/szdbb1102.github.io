@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+<div id="con">需要复制的文字</div>
+<br>
+<input type="button" name="" value="点击复制" onclick="copyToClipboard('con')">
+<br>
+<br>
+<input type="text" name="" placeholder="粘贴到这里试试">
+</body>
+<script>
+
+    function copyToClipboard(elementId) {
+        // 创建元素用于复制
+
+
+
+
+    }
+    document.oncopy = function () {
+        var aux = document.createElement("input");
+        var content = window.getSelection().toString();
+        aux.setAttribute("value", content);
+        setTimeout(function () {
+            document.body.appendChild(aux);
+            aux.select();
+            document.execCommand("copy");
+            document.body.removeChild(aux);
+        },100);
+    }
+</script>
+
+</html>
