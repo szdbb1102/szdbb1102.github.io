@@ -50,3 +50,7 @@ function containsRepeatingLetter(str) {
 + {n,}	重复n次或更多次
 + {n,m}	重复n到m次
 
+
+## 小括号的用法
+
+
