@@ -10,6 +10,10 @@ body{
     bottom: 0;
     left: 0;
     height: 50px;
+    transform: translate(0)
+}
+.hello.showTab .dialogue-footer{
+    transform: translate(0)
 }
 .component-dialogue-bar {
     position: relative;
@@ -50,12 +54,11 @@ body{
     height: 100%;
     display: flex;
     position: relative;
-    overflow: hidden;
+    // overflow: hidden;
 }
 .component-dialogue-bar-public li {
     padding: 0 2px;
     margin: 0;
-    overflow: hidden;
     text-align: center;
     flex-grow: 1;
     flex-shrink: 0;
@@ -65,6 +68,37 @@ body{
     justify-content: center;
     align-items: center;
     position: relative;
+}
+.component-dialogue-bar-public li section{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    background: #fff;
+    // border-left: 1px solid #ddd;
+    // border-right: 1px solid #ddd;
+}
+.component-dialogue-bar-public li section div{
+    border-top: 1px solid #ddd;
+}
+.component-dialogue-bar-public li section:after {
+    content: "";
+    position: absolute;
+    left: -1px;
+    top: 0;
+    transform-origin: 0 0;
+    transform: scale(.5);
+    height: 200%;
+    border-left: 1px solid #b7b7b7;
+}
+.component-dialogue-bar-public li section:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: 0 0;
+    transform: scale(.5);
+    height: 200%;
+    border-right: 1px solid #b7b7b7;
 }
 component-dialogue-bar-public li:not(:last-child):before {
     content: "";
@@ -99,4 +133,123 @@ component-dialogue-bar-public li:not(:last-child):before {
     background-color: #b7b7b7;
     height: 1px;
     z-index: 2;
+}
+// 顶部start
+._cover-top {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    height: 45px;
+    padding: 0 15px 0 10px;
+    line-height: 45px;
+    background: linear-gradient(180deg,#303036,#3c3b40);
+    opacity: 1;
+    color: #fff;
+    user-select: none;
+    -webkit-user-select: none;
+    transition: all .22s ease;
+}
+._cover-top .top-back {
+    max-width: 85px;
+    float: left;
+}
+._cover-top .top-back .icon-return-arrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+._cover-top .top-other {
+    height: 100%;
+    max-width: 75px;
+    min-width: 50px;
+    width: auto;
+    float: right;
+}
+._align-right {
+    text-align: right;
+}
+._cover-top .top-title {
+    padding: 0 8px;
+    overflow: hidden;
+    font-size: 18px;
+    justify-content: center;
+    text-align: center;
+}
+._cover-top .top-title {
+    transition: all .2s ease;
+}
+._effect {
+    opacity: 1;
+    transition: all .3s ease;
+}
+._cover-top .top-title>p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+// 顶部end
+
+// 选择话题
+.active.hello #prompt-body,.xx_bg {
+    overflow: hidden;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+.active.hello .xx_bg{
+    background-color: #333;
+    opacity: 0.5;
+}
+.active.hello #prompt-body .next-topic{
+    transform: translateY(0);
+}
+#prompt-body .next-topic {
+    padding: 12px 18px;
+    position: absolute;
+    bottom: 0;
+    opacity: 1;
+    background: #fff;
+    width: 100%;
+    transform: translateY(100%);
+    z-index: 100;
+    -webkit-box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0 30px 0 rgba(0,0,0,0.2);
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
+}
+#prompt-body .next-topic .topics {
+    text-align: center;
+}
+#prompt-body .next-topic .topics li {
+    display: inline-block;
+    margin: 5px 3px;
+}
+#prompt-body .next-topic .topics li a {
+    display: block;
+    padding: 5px 12px;
+    margin-right: 5px;
+    -webkit-border-radius: 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    color: white;
+}
+.primary-bg, .msg-me .msg, #prompt-body .next-topic .topics li a {
+    background: -webkit-linear-gradient(70deg, #3FD1E1 0%, #44D7CD 100%);
+    background: linear-gradient(20deg, #3FD1E1 0%, #44D7CD 100%);
+}
+
+.xx_animate_toggle{
+    transform: translateY(100%);
+    z-index: 100;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: -webkit-transform;
+    transition-property: -webkit-transform;
+    transition-property: transform;
+    transition-property: transform, -webkit-transform;
 }
