@@ -18,12 +18,14 @@
       </div>
     </div> -->
     <div class="xx_msg_wrap">
-      <div class="xx_msg_box" :class='{xx_left:item.ifLeft}' v-for="item in msgList">
-        {{item.msg}}
+      <div class="xx_msg_item" :class='{xx_left_txt:item.ifLeft}' v-for="item in msgList">
+        <div class="xx_msg_box" :class='{xx_left:item.ifLeft}'>
+          {{item.msg}}
+        </div>
       </div>
     </div>
-    <footer class="dialogue-footer xx_animate_toggle" @click="push()"> 
-      <div class="component-dialogue-bar">
+    <footer class="dialogue-footer" @click="push()"> 
+      <div class="component-dialogue-bar xx_animate_toggle">
         <div class="dialogue-item">
           <div class="left-slide-type iconfont icon-dialogue-bar-jianpan"  @click="toggleInput()"></div>
           <ul class="component-dialogue-bar-public" >
@@ -38,11 +40,7 @@
           </ul>
         </div>
       </div>
-    </footer>
-    <div id="prompt-body">
-        <div class="xx_bg" v-show='!ifShowSelectBar' @click="toggleInput()">
-
-        </div>
+      <div id="prompt-body">
         <div class="next-topic">
             <ul class="topics">
                 <li>
@@ -50,7 +48,12 @@
                 </li>
             </ul>
         </div>
+      </div>
+    </footer>
+    <div class="xx_bg" v-show='!ifShowSelectBar' @click="toggleInput()">
+
     </div>
+    
   </div>
 </template>
 
@@ -145,9 +148,10 @@ export default {
     padding: 10px;
     overflow-x: hidden;
     overflow-y: scroll;
+    box-sizing: border-box;
 }
 .xx_msg_box{
-  display: inline-block;
+    display: inline-block;
     padding: 9px 14px;
     max-width: 65%;
     overflow: hidden;
@@ -172,12 +176,13 @@ export default {
     color: #333;
     -webkit-border-radius: 0 20px 20px 20px;
     border-radius: 0 20px 20px 20px;
-    transform: translate3d(0, 100%, 0);
-    -webkit-transition: -webkit-transform 0.15s ease-in;
-    transition: -webkit-transform 0.15s ease-in;
-    transition: transform 0.15s ease-in;
-    transition: transform 1s ease-in, -webkit-transform 2s ease-in;
-
+}
+.xx_msg_item{
+  overflow: hidden;
+  text-align: right;
+}
+.xx_left_txt{
+  text-align: left;
 }
 
 </style>
