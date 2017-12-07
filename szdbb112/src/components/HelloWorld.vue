@@ -19,8 +19,7 @@
     </div> -->
     <div class="xx_msg_wrap" ref='wrap' @click="hideTabList()">
       <div class="xx_msg_item" :class='{xx_left_txt:item.ifLeft}' v-for="item in msgList">
-        <div class="xx_msg_box" :class='{xx_left:item.ifLeft}'>
-          {{item.msg}}
+        <div class="xx_msg_box" :class='{xx_left:item.ifLeft}' v-html="item.msg">
         </div>
       </div>
     </div>
@@ -68,65 +67,65 @@ export default {
       animateFlg:false,
       ifShowSelectBar:true,
       msg: 'test',
-      msgList:[{ifLeft:true,msg:'你好'},{ifLeft:false,msg:'好你妈'}],
-      tabs:[{id:1,txt:'测试1',show:false},{id:2,txt:'测试2',show:false},{id:3,txt:'测试3',show:false}],//底部tab
+      msgList:[{ifLeft:true,msg:'希望和你交朋友！'}],
+      tabs:[{id:1,txt:'基本信息',show:false},{id:2,txt:'个人作品',show:false},{id:3,txt:'特长喜好',show:false}],//底部tab
       tabContent:[
         {id:1,list:[
           {
             id:1,
-            txt:'测试'
+            txt:'别号由来'
           },
           {
             id:2,
-            txt:'测试'
+            txt:'出身背景'
           },
           {
             id:3,
-            txt:'测试'
+            txt:'天赋符文'
           },
         ]},
         {id:2,list:[
           {
             id:4,
-            txt:'测试'
+            txt:'学生时代'
           },
           {
             id:5,
-            txt:'测试'
+            txt:'工作项目'
           },
           {
             id:6,
-            txt:'测试'
+            txt:'闲暇练手'
           },
         ]},
         {id:3,list:[
           {
             id:7,
-            txt:'测试'
+            txt:'琴棋书画'
           },
           {
             id:8,
-            txt:'测试'
+            txt:'文韬武略'
           },
           {
             id:9,
-            txt:'测试'
+            txt:'奇门遁甲'
           },
         ]},
       ],
       biaoqianContent:
         {id:1,list:[
           {
-            id:1,
-            txt:'测试'
+            id:10,
+            txt:'书读百遍'
           },
           {
-            id:2,
-            txt:'测试'
+            id:11,
+            txt:'游戏人生'
           },
           {
-            id:3,
-            txt:'测试'
+            id:12,
+            txt:'工作意愿'
           },
         ]},
     }
@@ -153,7 +152,7 @@ export default {
       })
     },
     pushMsg(txt,flg){//flg：1左边，2右边
-      this.msgList.push({ifLeft:flg==1,msg:'txt'})
+      this.msgList.push({ifLeft:flg==1,msg:txt})
       setTimeout(()=>{
         this.$refs['wrap'].scrollTop = this.$refs['wrap'].scrollHeight;
       },100)
@@ -161,7 +160,8 @@ export default {
     findAnswers(id){
       let list = answers;
       list.map((e,idx)=>{
-        if(id===idx){
+        console.log(1,idx,id)
+        if(id===e.id){
           setTimeout(()=>{
             this.pushMsg(e.answer,1);
           },800)
