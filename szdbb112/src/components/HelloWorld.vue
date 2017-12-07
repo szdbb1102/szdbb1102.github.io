@@ -30,7 +30,7 @@
           <ul class="component-dialogue-bar-public" >
             <li v-for="(item, index) in tabs" @click="toggelTab(index)">
               <section v-show='item.show'>
-                <div v-for="itemm in tabContent[index].list" @click="pushMsg(item.txt,2);findAnswers(itemm.id)">
+                <div v-for="itemm in tabContent[index].list" @click="pushMsg(itemm.txt,2);findAnswers(itemm.id)">
                   {{itemm.txt}}
                 </div>
               </section>
