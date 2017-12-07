@@ -17,21 +17,21 @@
           </p>
       </div>
     </div> -->
-    <div class="xx_msg_wrap">
+    <div class="xx_msg_wrap" ref='wrap' @click="hideTabList()">
       <div class="xx_msg_item" :class='{xx_left_txt:item.ifLeft}' v-for="item in msgList">
         <div class="xx_msg_box" :class='{xx_left:item.ifLeft}'>
           {{item.msg}}
         </div>
       </div>
     </div>
-    <footer class="dialogue-footer" @click="push()"> 
+    <footer class="dialogue-footer"> 
       <div class="component-dialogue-bar xx_animate_toggle">
         <div class="dialogue-item">
           <div class="left-slide-type iconfont icon-dialogue-bar-jianpan"  @click="toggleInput()"></div>
           <ul class="component-dialogue-bar-public" >
             <li v-for="(item, index) in tabs" @click="toggelTab(index)">
               <section v-show='item.show'>
-                <div v-for="itemm in tabContent[index].list">
+                <div v-for="itemm in tabContent[index].list" @click="pushMsg(item.txt,2);findAnswers(itemm.id)">
                   {{itemm.txt}}
                 </div>
               </section>
@@ -43,8 +43,10 @@
       <div id="prompt-body">
         <div class="next-topic">
             <ul class="topics">
-                <li>
-                    <a href="javascript:;">爱好</a>
+                <li v-for="itemm in biaoqianContent.list" @click="pushMsg(itemm.txt,2);findAnswers(itemm.id);toggleInput()">
+                  <a>
+                  {{itemm.txt}}
+                  </a>
                 </li>
             </ul>
         </div>
@@ -58,6 +60,7 @@
 </template>
 
 <script>
+import answers from '../mock/mockData'
 export default {
   name: 'HelloWorld',
   data () {
@@ -110,13 +113,27 @@ export default {
             txt:'测试'
           },
         ]},
-      ]
-      
+      ],
+      biaoqianContent:
+        {id:1,list:[
+          {
+            id:1,
+            txt:'测试'
+          },
+          {
+            id:2,
+            txt:'测试'
+          },
+          {
+            id:3,
+            txt:'测试'
+          },
+        ]},
     }
   },
   methods:{
     push(){
-      this.msgList.push({ifLeft:true,msg:'测试时所所所所所所测试时所所所所所所测试时所所所所所所'})
+      // this.msgList.push({ifLeft:true,msg:'测试时所所所所所所测试时所所所所所所测试时所所所所所所'})
     },
     toggelTab(idx){
       this.tabs.map((e,index)=>{
@@ -127,10 +144,29 @@ export default {
       this.tabs[idx].show = !this.tabs[idx].show;
     },
     toggleInput(){
+      this.hideTabList()
+      this.ifShowSelectBar = !this.ifShowSelectBar;
+    },
+    hideTabList(){
       this.tabs.map((e,index)=>{//切换时去掉tab列表
           this.tabs[index].show = false;
       })
-      this.ifShowSelectBar = !this.ifShowSelectBar;
+    },
+    pushMsg(txt,flg){//flg：1左边，2右边
+      this.msgList.push({ifLeft:flg==1,msg:'txt'})
+      setTimeout(()=>{
+        this.$refs['wrap'].scrollTop = this.$refs['wrap'].scrollHeight;
+      },100)
+    },
+    findAnswers(id){
+      let list = answers;
+      list.map((e,idx)=>{
+        if(id===idx){
+          setTimeout(()=>{
+            this.pushMsg(e.answer,1);
+          },800)
+        }
+      })
     }
 
   }
