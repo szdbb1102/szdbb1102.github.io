@@ -67,7 +67,7 @@ export default {
       animateFlg:false,
       ifShowSelectBar:true,
       msg: 'test',
-      msgList:[{ifLeft:true,msg:'希望和你交朋友！'}],
+      msgList:[{ifLeft:true,msg:'我是Nicholas Boy Xue,希望和你交朋友！'}],
       tabs:[{id:1,txt:'基本信息',show:false},{id:2,txt:'个人作品',show:false},{id:3,txt:'特长喜好',show:false}],//底部tab
       tabContent:[
         {id:1,list:[
