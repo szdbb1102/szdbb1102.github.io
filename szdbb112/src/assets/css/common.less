@@ -265,6 +265,7 @@ component-dialogue-bar-public li:not(:last-child):before {
 }
 
 
+
 // /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
 // ::-webkit-scrollbar
 // {
@@ -288,3 +289,13 @@ component-dialogue-bar-public li:not(:last-child):before {
 //   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 //   background-color: #3c6;
 // }
+
+// 淡入淡出
+.xx_hide{
+    opacity: 0;
+}
+.xx_show{
+    // transform: opacity: 1;
+    opacity: 1;
+    transition: opacity 0.5s; 
+}

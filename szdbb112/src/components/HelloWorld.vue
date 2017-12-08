@@ -19,14 +19,14 @@
     </div> -->
     <div class="xx_msg_wrap" ref='wrap' @click="hideTabList()">
       <div class="xx_msg_item" :class='{xx_left_txt:item.ifLeft}' v-for="item in msgList">
-        <div class="xx_msg_box" :class='{xx_left:item.ifLeft}' v-html="item.msg">
+        <div class="xx_msg_box" :class='{xx_left:item.ifLeft,xx_hide:item.ifLast,xx_show:!item.ifLast}' v-html="item.msg">
         </div>
       </div>
     </div>
     <footer class="dialogue-footer"> 
       <div class="component-dialogue-bar xx_animate_toggle">
         <div class="dialogue-item">
-          <div class="left-slide-type iconfont icon-dialogue-bar-jianpan"  @click="toggleInput()"></div>
+          <div class="left-slide-type iconfont icon-more"  @click="toggleInput()"></div>
           <ul class="component-dialogue-bar-public" >
             <li v-for="(item, index) in tabs" @click="toggelTab(index)">
               <section v-show='item.show'>
@@ -152,15 +152,17 @@ export default {
       })
     },
     pushMsg(txt,flg){//flg：1左边，2右边
-      this.msgList.push({ifLeft:flg==1,msg:txt})
+      this.msgList.push({ifLeft:flg==1,msg:txt,ifLast:flg==1})
       setTimeout(()=>{
+        this.msgList.map((e,idx)=>{
+          this.msgList[idx].ifLast = false;
+        })
         this.$refs['wrap'].scrollTop = this.$refs['wrap'].scrollHeight;
       },100)
     },
     findAnswers(id){
       let list = answers;
       list.map((e,idx)=>{
-        console.log(1,idx,id)
         if(id===e.id){
           setTimeout(()=>{
             this.pushMsg(e.answer,1);
@@ -198,8 +200,6 @@ export default {
     border-radius: 20px;
     -webkit-box-shadow: 5px 5px 15px 0 rgba(102,102,102,0.1);
     box-shadow: 5px 5px 15px 0 rgba(102,102,102,0.1);
-    -webkit-transition: width .12s ease-out, height .12s ease-out;
-    transition: width .12s ease-out, height .12s ease-out;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     -webkit-border-radius: 20px 20px  0px 20px;
