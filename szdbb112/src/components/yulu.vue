@@ -3,7 +3,7 @@
         <div class="btn" @click="initList">随便看看</div>
         <div class="body">
             <div class="item" v-for="(item) in yuluList">
-                <div>薛少说：{{item.txt}}</div>
+                <div>薛少语录：{{item.txt}}</div>
                 <!-- <span>{{item.color}}</span> -->
             </div>
         </div>
@@ -46,7 +46,7 @@ export default {
     .body{
         position: fixed;
         top: 50%;
-        left: 20%;
+        left: 50%;
         transform: translate(-50%,-50%);
         color: #fff;
     }

@@ -9,7 +9,8 @@ let routes =  [
   {
     path: '/index',
     name: 'HelloWorld',
-    component: (resolve) => require(['@/components/HelloWorld'], resolve)
+    component: (resolve) => require(['@/components/HelloWorld'], resolve),
+    navbarOption: '个人简历',
   },
   {
     path: '/yulu',
@@ -25,7 +26,8 @@ let routes =  [
   {
     path: '/',
     name: 'HelloWorld',
-    component: (resolve) => require(['@/components/HelloWorld'], resolve)
+    component: (resolve) => require(['@/components/HelloWorld'], resolve),
+    navbarOption: '个人简历',
   },
 ]
 let router = new Router({
