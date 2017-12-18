@@ -18,7 +18,7 @@ export default {
   name: 'yulu',
   data () {
     return {
-        colorList:['#FBDDF4','#F3CD6B','#666','#FEBDEC','#9EEDF4','#AFEF90','#20B090'],
+        colorList:['#499315','#F3CD6B','#666','#FEBDEC','#9EEDF4','#AFEF90','#20B090'],
         yuluList:[],
         bg:'#ececec'
     }

@@ -68,6 +68,7 @@ export default {
         line-height: 30px;
         border-radius:4px;
         cursor: pointer;  
+        transform: translate(-50%,0%);
         
     }
     .item{
